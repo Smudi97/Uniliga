@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>LoL Gruppenziehung</title>
+    <link rel="stylesheet" href="./Gruppen.css">
+
+</head>
+
+<body>
+  <img src="./23w-Gruppen.png">
+
+  <div class="GruppeLeft">
+    <span id="G1Team1" class="Gruppe1 Zeile1"></span>
+    <span id="G1Team2" class="Gruppe1 Zeile2"></span>
+    <span id="G1Team3" class="Gruppe1 Zeile3"></span>
+    <span id="G1Team4" class="Gruppe1 Zeile4"></span>
+    <span id="G1Team5" class="Gruppe1 Zeile5"></span>
+    <span id="G1Team6" class="Gruppe1 Zeile6"></span>
+    <span id="G1Team7" class="Gruppe1 Zeile7"></span>
+    <span id="G1Team8" class="Gruppe1 Zeile8"></span>
+    <span id="G1Team9" class="Gruppe1 Zeile9"></span>
+  </div>
+
+  <div class="GruppeRight">
+    <span id="G2Team1" class="Gruppe2 Zeile1"></span>
+    <span id="G2Team2" class="Gruppe2 Zeile2"></span>
+    <span id="G2Team3" class="Gruppe2 Zeile3"></span>
+    <span id="G2Team4" class="Gruppe2 Zeile4"></span>
+    <span id="G2Team5" class="Gruppe2 Zeile5"></span>
+    <span id="G2Team6" class="Gruppe2 Zeile6"></span>
+    <span id="G2Team7" class="Gruppe2 Zeile7"></span>
+    <span id="G2Team8" class="Gruppe2 Zeile8"></span>
+    <span id="G2Team9" class="Gruppe2 Zeile9"></span>
+  </div>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B3' :'G1Team1',
+              'B4' :'G1Team2',
+              'B5' :'G1Team3',
+              'B6' :'G1Team4',
+              'B7' :'G1Team5',
+              'B8' :'G1Team6',
+              'B9' :'G1Team7',
+              'B10' :'G1Team8',
+              'B11' :'G1Team9',
+              'C3' :'G2Team1',
+              'C4' :'G2Team2',
+              'C5' :'G2Team3',
+              'C6' :'G2Team4',
+              'C7' :'G2Team5',
+              'C8' :'G2Team6',
+              'C9' :'G2Team7',
+              'C10' :'G2Team8',
+              'C11' :'G2Team9'
+        }}
+
+        const spreadsheetID = '1-YrafQ2HZcbX-SSPR46e5qoz6XQcx5FgCt11ls1g5lw';
+        const worksheetName = 'Sheet1';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>
