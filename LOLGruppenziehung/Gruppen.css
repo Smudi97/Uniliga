@@ -20,81 +20,86 @@
 
 body{
 font-family: 'Zona Pro';
-background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; 
+background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden;
 }
 
 .Gruppe1{
-  font-size: 44px;
+  font-size: 36px;
   left: 455px;
   text-align: center;
-  width: 450px;
   color: white;
   text-transform: uppercase;
   position: absolute;
-  width: inherit;
+  width:450px;
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Gruppe2{
-  font-size: 44px;
+  font-size: 36px;
   left: 1012px;
   text-align: center;
-  width: 450px;
   color: white;
   text-transform: uppercase;
   position: absolute;
-  width: inherit;
+  width:450px;
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Zeile1{
   position: absolute;
-  top: 278px;
-  width: 450px;
+  top: 283px;
 }
 
 .Zeile2{
   position: absolute;
-  top: 354px;
+  top: 359px;
   width: 450px;
 }
 
 .Zeile3{
   position: absolute;
-  top: 430px;
+  top: 435px;
   width: 450px;
 }
 
 .Zeile4{
   position: absolute;
-  top: 506px;
+  top: 511px;
   width: 450px;
 }
 
 .Zeile5{
   position: absolute;
-  top: 582px;
+  top: 587px;
   width: 450px;
 }
 
 .Zeile6{
   position: absolute;
-  top: 658px;
+  top: 663px;
   width: 450px;
 }
 
 .Zeile7{
   position: absolute;
-  top: 734px;
+  top: 739px;
   width: 450px;
 }
 
 .Zeile8{
   position: absolute;
-  top: 810px;
+  top: 815px;
   width: 450px;
 }
 
 .Zeile9{
   position: absolute;
-  top: 886px;
+  top: 891px;
   width: 450px;
 }
