@@ -1,0 +1,55 @@
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  color: white;
+  src: url('./ZonaPro-Regular.otf');
+}
+
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  src: url('./ZonaPro-Bold.otf');
+}
+
+*{
+  box-sizing: border-box;
+  /* outline: solid coral; */
+}
+
+body{
+font-family: 'Zona Pro';
+background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; 
+}
+
+.FrageAntwortBox{
+  display:grid;
+  grid-template-columns: 640px 640px;
+  justify-content: space-around;
+  color:white;
+  font-size:44px;
+  font-weight: bold;
+  position: absolute;
+  left: 496px;
+  top: 100px;
+  width: 1320px;
+  height:440px;
+  align-items: center;
+}
+
+#AktuelleAntwort{
+  overflow:hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}
+
+#Platzhalter{
+  overflow:hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}

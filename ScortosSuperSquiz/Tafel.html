@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Scortos Super Squiz Quiztafel</title>
+    <link rel="stylesheet" href="./TafelStyle.css">
+
+</head>
+
+<body>
+  <img src="./BackgroundTafel.png">
+    <div class="ThemenBox">
+      <span id="Thema1Titel" class="ThemenTitel"></span>
+      <span id="Thema2Titel" class="ThemenTitel"></span>
+      <span id="Thema3Titel" class="ThemenTitel"></span>
+      <span id="Thema4Titel" class="ThemenTitel"></span>
+      <span id="Thema5Titel" class="ThemenTitel"></span>
+    </div>
+
+  <div class="PunkteTabelle">
+    <span id="Thema1Frage1Punkte" class="Punkte Spalte1 Zeile1"></span>
+    <span id="Thema2Frage1Punkte" class="Punkte Spalte2 Zeile1"></span>
+    <span id="Thema3Frage1Punkte" class="Punkte Spalte3 Zeile1"></span>
+    <span id="Thema4Frage1Punkte" class="Punkte Spalte4 Zeile1"></span>
+    <span id="Thema5Frage1Punkte" class="Punkte Spalte5 Zeile1"></span>
+    <span id="Thema1Frage2Punkte" class="Punkte Spalte1 Zeile2"></span>
+    <span id="Thema2Frage2Punkte" class="Punkte Spalte2 Zeile2"></span>
+    <span id="Thema3Frage2Punkte" class="Punkte Spalte3 Zeile2"></span>
+    <span id="Thema4Frage2Punkte" class="Punkte Spalte4 Zeile2"></span>
+    <span id="Thema5Frage2Punkte" class="Punkte Spalte5 Zeile2"></span>
+    <span id="Thema1Frage3Punkte" class="Punkte Spalte1 Zeile3"></span>
+    <span id="Thema2Frage3Punkte" class="Punkte Spalte2 Zeile3"></span>
+    <span id="Thema3Frage3Punkte" class="Punkte Spalte3 Zeile3"></span>
+    <span id="Thema4Frage3Punkte" class="Punkte Spalte4 Zeile3"></span>
+    <span id="Thema5Frage3Punkte" class="Punkte Spalte5 Zeile3"></span>
+    <span id="Thema1Frage4Punkte" class="Punkte Spalte1 Zeile4"></span>
+    <span id="Thema2Frage4Punkte" class="Punkte Spalte2 Zeile4"></span>
+    <span id="Thema3Frage4Punkte" class="Punkte Spalte3 Zeile4"></span>
+    <span id="Thema4Frage4Punkte" class="Punkte Spalte4 Zeile4"></span>
+    <span id="Thema5Frage4Punkte" class="Punkte Spalte5 Zeile4"></span>
+    <span id="Thema1Frage5Punkte" class="Punkte Spalte1 Zeile5"></span>
+    <span id="Thema2Frage5Punkte" class="Punkte Spalte2 Zeile5"></span>
+    <span id="Thema3Frage5Punkte" class="Punkte Spalte3 Zeile5"></span>
+    <span id="Thema4Frage5Punkte" class="Punkte Spalte4 Zeile5"></span>
+    <span id="Thema5Frage5Punkte" class="Punkte Spalte5 Zeile5"></span>
+  </div>
+
+  <table class="TeilnehmerTabelle">
+    <tr class="TeilnehmerNamenZeile">
+      <td class="TeilnehmerNamenZelle" id="Teilnehmer1Name"></td>
+      <td class="TeilnehmerNamenFillerZelle"></td>
+      <td class="TeilnehmerNamenZelle" id="Teilnehmer2Name"></td>
+      <td class="TeilnehmerNamenFillerZelle"></td>
+      <td class="TeilnehmerNamenZelle" id="Teilnehmer3Name"></td>
+      <td class="TeilnehmerNamenFillerZelle"></td>
+      <td class="TeilnehmerNamenZelle" id="Teilnehmer4Name"></td>
+    </tr>
+    <tr class="TeilnehmerPunkteZeile">
+      <td class="TeilnehmerNamenZelle" id="Teilnehmer1PunkteTotal"></td>
+      <td class="TeilnehmerNamenFillerZelle"></td>
+      <td class="TeilnehmerNamenZelle" id="Teilnehmer2PunkteTotal"></td>
+      <td class="TeilnehmerNamenFillerZelle"></td>
+      <td class="TeilnehmerNamenZelle" id="Teilnehmer3PunkteTotal"></td>
+      <td class="TeilnehmerNamenFillerZelle"></td>
+      <td class="TeilnehmerNamenZelle" id="Teilnehmer4PunkteTotal"></td>
+    </tr>
+  </table>
+  <span id="HostName"></span>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B51' :'Thema1Frage1Punkte',
+              'B52' :'Thema1Frage2Punkte',
+              'B53' :'Thema1Frage3Punkte',
+              'B54' :'Thema1Frage4Punkte',
+              'B55' :'Thema1Frage5Punkte',
+              'B56' :'Thema2Frage1Punkte',
+              'B57' :'Thema2Frage2Punkte',
+              'B58' :'Thema2Frage3Punkte',
+              'B59' :'Thema2Frage4Punkte',
+              'B60' :'Thema2Frage5Punkte',
+              'B61' :'Thema3Frage1Punkte',
+              'B62' :'Thema3Frage2Punkte',
+              'B63' :'Thema3Frage3Punkte',
+              'B64' :'Thema3Frage4Punkte',
+              'B65' :'Thema3Frage5Punkte',
+              'B66' :'Thema4Frage1Punkte',
+              'B67' :'Thema4Frage2Punkte',
+              'B68' :'Thema4Frage3Punkte',
+              'B69' :'Thema4Frage4Punkte',
+              'B70' :'Thema4Frage5Punkte',
+              'B71' :'Thema5Frage1Punkte',
+              'B72' :'Thema5Frage2Punkte',
+              'B73' :'Thema5Frage3Punkte',
+              'B74' :'Thema5Frage4Punkte',
+              'B75' :'Thema5Frage5Punkte',
+              'B78' :'Teilnehmer1Name',
+              'B79' :'Teilnehmer2Name',
+              'B80' :'Teilnehmer3Name',
+              'B81' :'Teilnehmer4Name',
+              'B82' :'Teilnehmer1PunkteTotal',
+              'B83' :'Teilnehmer2PunkteTotal',
+              'B84' :'Teilnehmer3PunkteTotal',
+              'B85' :'Teilnehmer4PunkteTotal',
+              'B86' :'Thema1Titel',
+              'B87' :'Thema2Titel',
+              'B88' :'Thema3Titel',
+              'B89' :'Thema4Titel',
+              'B90' :'Thema5Titel',
+              'B91' :'HostName',
+        }}
+
+        const spreadsheetID = '18IYecpmLI1EXnl-YPBDRlFvhOFxoKanM5t5Hx_fDftQ';
+        const worksheetName = 'Output html';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>
