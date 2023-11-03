@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>CS Team Stats 1</title>
+    <link rel="stylesheet" href="./teams1.css">
+
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
+
+<img src="./teamsbg.png">
+
+<div class="TeamLogoContainer"> 
+  <table>
+    <tr>
+      <td class= "AnimLeft"><img id="team1logo"></td>
+      <td id="SpacerTeams"></td>
+      <td class= "AnimRight"><img id="team2logo"></td>
+    </tr>
+  </div>
+
+<div class="SpielerNamenBlue AnimLeft">
+  <span class= "SpielerNamenBlueLine" id="team1spieler1name"></span>
+  <span class= "SpielerNamenBlueLine" id="team1spieler2name"></span>
+  <span class= "SpielerNamenBlueLine" id="team1spieler3name"></span>
+</div>
+<div class="SpielerNamenOrange AnimRight">
+    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin1Name"></span>
+    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin2Name"></span>
+    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin3Name"></span>
+  </div>
+  
+</table>
+    <table class="TeamBlueStats AnimLeft">
+        <tr>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1GoalsPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2GoalsPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3GoalsPerGame"></td>
+        </tr>
+        <tr>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1SavesPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2SavesPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3SavesPerGame"></td>
+        </tr>
+        <tr>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1AssistsPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2AssistsPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3AssistsPerGame"></td>
+        </tr>
+        <tr>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1ShotPerc"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2ShotPerc"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3ShotPerc"></td>
+        </tr>
+    </table>
+
+    <table class="TeamOrangeStats AnimRight">
+      <tr>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1GoalsPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2GoalsPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3GoalsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1SavesPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2SavesPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3SavesPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1AssistsPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2AssistsPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3AssistsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1ShotPerc"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2ShotPerc"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3ShotPerc"></td>
+      </tr>
+  </table>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B2': 'team1name',
+              'B4': 'team2name',
+              'B5': 'team1spieler1name',
+              'B6': 'team1spieler1maps',
+              'B7': 'team1spieler1kd',
+              'B8': 'team1spieler1adr',
+              'B9': 'team1spieler1kpr',
+              'B10': 'team1spieler2name',
+              'B11': 'team1spieler2maps',
+              'B12': 'team1spieler2kd',
+              'B13': 'team1spieler2adr',
+              'B14': 'team1spieler2kpr',
+              'B15': 'team1spieler3name',
+              'B16': 'team1spieler3maps',
+              'B17': 'team1spieler3kd',
+              'B18': 'team1spieler3adr',
+              'B19': 'team1spieler3kpr',
+              'B20': 'team1spieler4name',
+              'B21': 'team1spieler4maps',
+              'B22': 'team1spieler4kd',
+              'B23': 'team1spieler4adr',
+              'B24': 'team1spieler4kpr',
+              'B25': 'team1spieler5name',
+              'B26': 'team1spieler5maps',
+              'B27': 'team1spieler5kd',
+              'B28': 'team1spieler5adr',
+              'B29': 'team1spieler5kpr',
+              'B30': 'team2spieler1name',
+              'B31': 'team2spieler1maps',
+              'B32': 'team2spieler1kd',
+              'B33': 'team2spieler1adr',
+              'B34': 'team2spieler1kpr',
+              'B35': 'team2spieler2name',
+              'B36': 'team2spieler2maps',
+              'B37': 'team2spieler2kd',
+              'B38': 'team2spieler2adr',
+              'B39': 'team2spieler2kpr',
+              'B40': 'team2spieler3name',
+              'B41': 'team2spieler3maps',
+              'B42': 'team2spieler3kd',
+              'B43': 'team2spieler3adr',
+              'B44': 'team2spieler3kpr',
+              'B45': 'team2spieler4name',
+              'B46': 'team2spieler4maps',
+              'B47': 'team2spieler4kd',
+              'B48': 'team2spieler4adr',
+              'B49': 'team2spieler4kpr',
+              'B50': 'team2spieler5name',
+              'B51': 'team2spieler5maps',
+              'B52': 'team2spieler5kd',
+              'B53': 'team2spieler5adr',
+              'B54': 'team2spieler5kpr',
+            },
+            "image": {
+              'B1': 'team1logo',
+              'B3': 'team2logo',
+            }
+        }
+
+        const spreadsheetID = '1aaOCiJbSxX0Di1Teny1w5F7j37bd3_nQG_ZxCDJ59mg';
+        const worksheetName = 'teamh2h1output';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>
