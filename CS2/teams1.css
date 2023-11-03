@@ -139,13 +139,13 @@
 .SpielerStatsLeftGrid{
   display:grid;
   grid-column-gap:25px;
-  grid-row-gap: 82px;
+  grid-row-gap: 83px;
   grid-template: auto / 150px 150px 150px 150px 150px;
   color:white;
   font-size:42px;
   width: 850px;
   position:absolute;
-  top: 594px;
+  top: 591px;
   left: 56px;
   text-align:center;
 }
@@ -153,13 +153,13 @@
 .SpielerStatsRightGrid{
   display:grid;
   grid-column-gap:25px;
-  grid-row-gap: 82px;
+  grid-row-gap: 83px;
   grid-template: auto / 150px 150px 150px 150px 150px;
   color:white;
   font-size:42px;
   width: 850px;
   position:absolute;
-  top: 594px;
+  top: 591px;
   right: 56px;
   text-align:center;
 }
