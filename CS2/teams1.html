@@ -10,74 +10,96 @@
 
 <body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
 
+<div class="SpielerBilderLeftGrid">
+  <img id="team1spieler1bild"></img>
+  <img id="team1spieler2bild"></img>
+  <img id="team1spieler3bild"></img>
+  <img id="team1spieler4bild"></img>
+  <img id="team1spieler5bild"></img>
+</div>
+
+<div class="SpielerBilderRightGrid">
+  <img id="team2spieler1bild"></img>
+  <img id="team2spieler2bild"></img>
+  <img id="team2spieler3bild"></img>
+  <img id="team2spieler4bild"></img>
+  <img id="team2spieler5bild"></img>
+</div>
+
 <img src="./teamsbg.png">
 
 <div class="TeamLogoContainer"> 
-  <table>
-    <tr>
-      <td class= "AnimLeft"><img id="team1logo"></td>
-      <td id="SpacerTeams"></td>
-      <td class= "AnimRight"><img id="team2logo"></td>
-    </tr>
-  </div>
-
-<div class="SpielerNamenBlue AnimLeft">
-  <span class= "SpielerNamenBlueLine" id="team1spieler1name"></span>
-  <span class= "SpielerNamenBlueLine" id="team1spieler2name"></span>
-  <span class= "SpielerNamenBlueLine" id="team1spieler3name"></span>
+  <img class="AnimLeft" id="team1logo">
+  <img class="AnimRight" id="team2logo">
 </div>
-<div class="SpielerNamenOrange AnimRight">
-    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin1Name"></span>
-    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin2Name"></span>
-    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin3Name"></span>
-  </div>
-  
-</table>
-    <table class="TeamBlueStats AnimLeft">
-        <tr>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1GoalsPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2GoalsPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3GoalsPerGame"></td>
-        </tr>
-        <tr>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1SavesPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2SavesPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3SavesPerGame"></td>
-        </tr>
-        <tr>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1AssistsPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2AssistsPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3AssistsPerGame"></td>
-        </tr>
-        <tr>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1ShotPerc"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2ShotPerc"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3ShotPerc"></td>
-        </tr>
-    </table>
 
-    <table class="TeamOrangeStats AnimRight">
-      <tr>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1GoalsPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2GoalsPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3GoalsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1SavesPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2SavesPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3SavesPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1AssistsPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2AssistsPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3AssistsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1ShotPerc"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2ShotPerc"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3ShotPerc"></td>
-      </tr>
-  </table>
+<div class="SpielerNamenLeftGrid">
+  <div class="namen" id="team1spieler1name"></div>
+  <div class="namen" id="team1spieler2name"></div>
+  <div class="namen" id="team1spieler3name"></div>
+  <div class="namen" id="team1spieler4name"></div>
+  <div class="namen" id="team1spieler5name"></div>
+  <div class="maps" id="team1spieler1maps"></div>
+  <div class="maps" id="team1spieler2maps"></div>
+  <div class="maps" id="team1spieler3maps"></div>
+  <div class="maps" id="team1spieler4maps"></div>
+  <div class="maps" id="team1spieler5maps"></div>
+</div>
+
+<div class="SpielerNamenRightGrid">
+  <div class="namen" id="team2spieler1name"></div>
+  <div class="namen" id="team2spieler2name"></div>
+  <div class="namen" id="team2spieler3name"></div>
+  <div class="namen" id="team2spieler4name"></div>
+  <div class="namen" id="team2spieler5name"></div>
+  <div class="maps" id="team2spieler1maps"></div>
+  <div class="maps" id="team2spieler2maps"></div>
+  <div class="maps" id="team2spieler3maps"></div>
+  <div class="maps" id="team2spieler4maps"></div>
+  <div class="maps" id="team2spieler5maps"></div>
+</div>
+
+<div class="SpielerStatsLeftGrid">
+  <div id="team1spieler1kd"></div>
+  <div id="team1spieler2kd"></div>
+  <div id="team1spieler3kd"></div>
+  <div id="team1spieler4kd"></div>
+  <div id="team1spieler5kd"></div>
+  <div id="team1spieler1adr"></div>
+  <div id="team1spieler2adr"></div>
+  <div id="team1spieler3adr"></div>
+  <div id="team1spieler4adr"></div>
+  <div id="team1spieler5adr"></div>
+  <div id="team1spieler1kpr"></div>
+  <div id="team1spieler2kpr"></div>
+  <div id="team1spieler3kpr"></div>
+  <div id="team1spieler4kpr"></div>
+  <div id="team1spieler5kpr"></div>
+</div>
+
+<div class="SpielerStatsRightGrid">
+  <div id="team2spieler1kd"></div>
+  <div id="team2spieler2kd"></div>
+  <div id="team2spieler3kd"></div>
+  <div id="team2spieler4kd"></div>
+  <div id="team2spieler5kd"></div>
+  <div id="team2spieler1adr"></div>
+  <div id="team2spieler2adr"></div>
+  <div id="team2spieler3adr"></div>
+  <div id="team2spieler4adr"></div>
+  <div id="team2spieler5adr"></div>
+  <div id="team2spieler1kpr"></div>
+  <div id="team2spieler2kpr"></div>
+  <div id="team2spieler3kpr"></div>
+  <div id="team2spieler4kpr"></div>
+  <div id="team2spieler5kpr"></div>
+</div>
+
+<div class="SpielerNamenOrange AnimRight">
+  <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin1Name"></span>
+  <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin2Name"></span>
+  <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin3Name"></span>
+</div>
 
     <!-- JAVASCRIPT STUFF -->
     <script src="./Updater.js"></script>
@@ -141,6 +163,16 @@
             "image": {
               'B1': 'team1logo',
               'B3': 'team2logo',
+              'B55': 'team1spieler1bild',
+              'B56': 'team1spieler2bild',
+              'B57': 'team1spieler3bild',
+              'B58': 'team1spieler4bild',
+              'B59': 'team1spieler5bild',
+              'B60': 'team2spieler1bild',
+              'B61': 'team2spieler2bild',
+              'B62': 'team2spieler3bild',
+              'B63': 'team2spieler4bild',
+              'B64': 'team2spieler5bild',
             }
         }
 

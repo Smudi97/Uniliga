@@ -1,22 +1,15 @@
 @font-face{
-  font-family: 'Zona Pro';
+  font-family: 'Zona Pro Countdown';
   font-style: normal;
   color: white;
-  src: url('./ZonaPro-Regular.otf');
+  src: url('./ZonaProCountdown.otf');
 }
 @font-face{
-  font-family: 'Zona Pro';
+  font-family: 'Zona Pro Bold Countdown';
   font-style: normal;
   font-weight: bold;
   color: white;
-  src: url('./ZonaPro-Bold.otf');
-}
-@font-face{
-  font-family: 'Zona Pro';
-  font-style: normal;
-  font-weight: 1000;
-  color: white;
-  src: url('./ZonaPro-ExtraBold.otf');
+  src: url('./ZonaPro-BoldCountdown.otf');
 }
 
 @keyframes fadeInLeft{
@@ -33,8 +26,11 @@
 
 *{
   /* box-sizing: border-box; */
- outline: solid 2px coral;
+  font-family: Zona Pro Countdown;
+  /* outline: solid 2px coral; */
 }
+
+/* Animationen */
 
 .AnimLeft{
   animation: fadeInLeft 3s ease-in-out;
@@ -44,196 +40,130 @@
   animation: fadeInRight 3s ease-in-out;
 }
 
+/* Team Logos oben */
+
 .TeamLogoContainer{
-  position:absolute;
+  position: absolute;
   display: grid;
-  place-items: center;
-  top: 40px;
-  width: 1920px;
+  grid-column-gap:322px;
+  grid-template: auto / 160px 160px;
+  top: 42px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-#SpacerTeams{
-  width:320px;
+.TeamLogoContainer img{
+  max-height:160px;
 }
 
-#team1logo{
-  max-width: 160px;
-  max-height: 160px;
-}
+/* Spielerbilder */
 
-#team2logo{
-  max-width: 160px;
-  max-height: 160px;
-}
-
-.SpielerStatslBox{
-  position: absolute;
-  width: 795px;
-  height:500px;
-  top:70px;
-  left:100px;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 10px;
-}
-
-.SpielerStatslBoxKlein{
-  position: absolute;
-  width: 256px;
-  height:340px;
-  top:580px;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 8px;
-}
-
-#SpielerStatslBoxKlein1{
-  position: absolute;
-  left:100px;
-}
-
-#SpielerStatslBoxKlein2{
-  position: absolute;
-  left:370px;
-}
-
-#SpielerStatslBoxKlein3{
-  position: absolute;
-  left:640px;
-}
-
-.SpielerStatsrBox{
-  position: absolute;
-  width: 795px;
-  height:500px;
-  top:70px;
-  right:100px;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 10px;
-}
-
-.SpielerStatsrBoxKlein{
-  position: absolute;
-  width: 256px;
-  height:340px;
-  top:580px;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 8px;
-}
-
-#SpielerStatsrBoxKlein1{
-  position: absolute;
-  right:100px;
-}
-
-#SpielerStatsrBoxKlein2{
-  position: absolute;
-  right:370px;
-}
-
-#SpielerStatsrBoxKlein3{
-  position: absolute;
-  right:640px;
-}
-
-#SpielerStatsrPNG{
-  position:absolute;
-  left:0px;
-  top:0px;
-  width: 1920px;
-  height: 1080px;
-}
-
-#SpielerStatslPNG{
-  position:absolute;
-  left:0px;
-  top:0px;
-  width: 1920px;
-  height: 1080px;
-}
-
-.SpielerNamenBlue{
+.SpielerBilderLeftGrid{
   display:grid;
-  grid-template-columns: 225px 225px 225px;
-  justify-content: space-around;
-  color:white;
-  width: 815px;
-  height:3.5em;
-  align-items:center;
-  overflow: hidden;
-  text-transform: uppercase;
+  grid-template:auto / 175px 175px 175px 175px 175px;
   position:absolute;
-  top:590px;
-  left:90px;
+  top:125px;
+  left:-7px;
 }
 
-.SpielerNamenBlueLine{
-  font-family: Zona Pro;
-  color: white;
-  font-weight:bold;
-  font-size: 34px;
-  text-align: center;
-  width: 225px;
-  overflow:hidden;
-  white-space: nowrap;
-  text-overflow:ellipsis;
+.SpielerBilderLeftGrid img{
+  max-height:340px;
 }
 
-.SpielerNamenOrange{
+.SpielerBilderRightGrid{
   display:grid;
-  grid-template-columns: 225px 225px 225px;
-  justify-content: space-around;
+  grid-template:auto / 175px 175px 175px 175px 175px;
+  position:absolute;
+  top:125px;
+  right:96px;
+}
+
+.SpielerBilderRightGrid img{
+  max-height:340px;
+}
+
+/* Spielernamen */
+
+.SpielerNamenLeftGrid{
+  display:grid;
+  grid-column-gap:25px;
+  grid-row-gap: 4px;
+  grid-template: auto / 150px 150px 150px 150px 150px;
   color:white;
-  width: 815px;
-  height:3.5em;
-  align-items:center;
-  overflow: hidden;
-  text-transform: uppercase;
+  width: 850px;
   position:absolute;
-  top:590px;
-  right:90px;
+  top: 482px;
+  left: 56px;
+  text-align:center;
 }
 
-.SpielerNamenOrangeLine{
-  font-family: Zona Pro;
-  color: white;
-  font-weight:bold;
-  font-size: 34px;
-  text-align: center;
-  width: 225px;
+.SpielerNamenLeftGrid div{
   overflow:hidden;
-  white-space: nowrap;
-  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  height:1.2em;
 }
 
-.TeamBlueStats{
+.SpielerNamenRightGrid{
+  display:grid;
+  grid-column-gap:25px;
+  grid-row-gap: 4px;
+  grid-template: auto / 150px 150px 150px 150px 150px;
+  color:white;
+  width: 850px;
   position:absolute;
-  top:650px;
-  left:136px;
+  top: 482px;
+  right: 56px;
+  text-align:center;
 }
 
-.TeamBlueSpielerinStats{
-  font-family: Zona Pro;
-  color: white;
-  width: 266px;
-  height: 60px;
-  font-size: 34px;
-  text-align: center;
+.SpielerNamenRightGrid div{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  height:1.2em;
 }
 
-.TeamOrangeStats{
+.namen{
+  font-weight:bold;
+  font-size:26px;
+}
+
+.maps{
+  font-weight:normal;
+  font-size:15px;
+}
+
+/* Stats */
+
+.SpielerStatsLeftGrid{
+  display:grid;
+  grid-column-gap:25px;
+  grid-row-gap: 82px;
+  grid-template: auto / 150px 150px 150px 150px 150px;
+  color:white;
+  font-size:42px;
+  width: 850px;
   position:absolute;
-  top:650px;
-  left: 1070px;;
+  top: 594px;
+  left: 56px;
+  text-align:center;
 }
 
-.TeamOrangeSpielerinStats{
-  font-family: Zona Pro;
-  color: white;
-  width: 266px;
-  height: 60px;
-  font-size: 34px;
-  text-align: center;
+.SpielerStatsRightGrid{
+  display:grid;
+  grid-column-gap:25px;
+  grid-row-gap: 82px;
+  grid-template: auto / 150px 150px 150px 150px 150px;
+  color:white;
+  font-size:42px;
+  width: 850px;
+  position:absolute;
+  top: 594px;
+  right: 56px;
+  text-align:center;
+}
+
+.HöchsterWert{
+  font-weight:bold;
 }
