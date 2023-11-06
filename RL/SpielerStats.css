@@ -37,11 +37,11 @@
 }
 
 .AnimLeft{
-  animation: fadeInLeft 3s ease-in-out;
+  animation: fadeInLeft 2s ease-in-out;
 }
 
 .AnimRight{
-  animation: fadeInRight 3s ease-in-out;
+  animation: fadeInRight 2s ease-in-out;
 }
 
 .SpielerStatslBox{

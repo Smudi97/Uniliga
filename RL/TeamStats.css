@@ -56,27 +56,27 @@
 }
 
 .AnimLeft{
-  animation: fadeInLeft 3s ease-in-out;
+  animation: fadeInLeft 2s ease-in-out;
 }
 
 .AnimRight{
-  animation: fadeInRight 3s ease-in-out;
+  animation: fadeInRight 2s ease-in-out;
 }
 
 .AnimTop{
-  animation: fadeInTop 3.5s ease-in-out;
+  animation: fadeInTop 2.5s ease-in-out;
 }
 
 .AnimBottomLogo{
-  animation: fadeInBottomLogo 3.5s ease-in-out;
+  animation: fadeInBottomLogo 2.5s ease-in-out;
 }
 
 .AnimBottomText{
-  animation: fadeInBottomText 3.5s ease-in-out;
+  animation: fadeInBottomText 2.5s ease-in-out;
 }
 
 .AnimCenter{
-  animation: fadeInCenter 3s ease-in-out;
+  animation: fadeInCenter 2s ease-in-out;
 }
 
 *{
