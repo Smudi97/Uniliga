@@ -9,9 +9,33 @@
 </head>
 
 <body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
-  <img class="AnimLeft" id="TeamStatslPNG">
-  <img class="AnimRight" id="TeamStatsrPNG">
-  <img class="AnimCenter" id="TeamStatscPNG">
+  <!-- <img class="AnimLeft" id="TeamStatslPNG"> -->
+  <!-- <img class="AnimRight" id="TeamStatsrPNG"> -->
+
+  <div class="AnimLeft TeamLeftBox">
+    <span>Goals</span>
+    <span>Shots</span>
+    <span>assists</span>
+    <span>saves</span>
+    <span>team shot%</span>
+    <span>avg team speed</span>
+  </div>
+
+  <div class="AnimRight TeamRightBox">
+    <span>Goals</span>
+    <span>Shots</span>
+    <span>assists</span>
+    <span>saves</span>
+    <span>team shot%</span>
+    <span>avg team speed</span>
+  </div>
+
+  <img class="AnimLeft" src="iconsleft.png" id="iconsleft">
+  <img class="AnimRight" src="iconsright.png" id="iconsright">
+  <img class="AnimCenter" src="center.png" id="TeamStatscPNG">
+  
+
+  <!-- <img class="AnimCenter" id="TeamStatscPNG"> -->
     <table class="AnimLeft">
       <tr>
         <td class= "TeamBlueStats" id="TeamBlueGoalsPerGame"></td>
@@ -89,10 +113,6 @@
             "image": {
               'B8': 'TeamBlueLogoLink',
               'B16': 'TeamOrangeLogoLink',
-              'B48': 'TeamStatsPNG',
-              'B50': 'TeamStatslPNG',
-              'B51': 'TeamStatsrPNG',
-              'B54': 'TeamStatscPNG',
             }
         }
 

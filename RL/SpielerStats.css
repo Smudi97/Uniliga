@@ -1,47 +1,27 @@
-@font-face{
-  font-family: 'Zona Pro';
-  font-style: normal;
-  color: white;
-  src: url('./ZonaPro-Regular.otf');
-}
-@font-face{
-  font-family: 'Zona Pro';
-  font-style: normal;
-  font-weight: bold;
-  color: white;
-  src: url('./ZonaPro-Bold.otf');
-}
-@font-face{
-  font-family: 'Zona Pro';
-  font-style: normal;
-  font-weight: 1000;
-  color: white;
-  src: url('./ZonaPro-ExtraBold.otf');
-}
-
 @keyframes fadeInLeft{
   0% {opacity:0}
-  70% {opacity:0; transform: translateX(-50px)}
+  30% {opacity:0; transform: translateX(-50px)}
   100% {opacity:1; transform: translateX(0)}
 }
 
 @keyframes fadeInRight{
   0% {opacity:0}
-  70% {opacity:0; transform: translateX(50px)}
+  30% {opacity:0; transform: translateX(50px)}
   100% {opacity:1; transform: translateX(0)}
 }
 
 *{
   /* box-sizing: border-box; */
- /* outline: solid coral; */
+ /* outline: solid coral 2px; */
+ font-family:'Sora Uni';
 }
 
 .AnimLeft{
-  animation: fadeInLeft 2s ease-in-out;
+  animation: fadeInLeft 1.3s ease-in-out;
 }
 
 .AnimRight{
-  animation: fadeInRight 2s ease-in-out;
+  animation: fadeInRight 1.3s ease-in-out;
 }
 
 .SpielerStatslBox{
@@ -144,12 +124,11 @@
 }
 
 .TeamNamenText{
-  font-family: Zona Pro;
   color: white;
   font-weight:1000;
   height: 2em;
   width: 745px;
-  font-size: 60px;
+  font-size: 55px;
   text-align: center;
 }
 #SpacerTeams{
@@ -182,7 +161,6 @@
 }
 
 .SpielerNamenBlueLine{
-  font-family: Zona Pro;
   color: white;
   font-weight:bold;
   font-size: 34px;
@@ -209,7 +187,6 @@
 }
 
 .SpielerNamenOrangeLine{
-  font-family: Zona Pro;
   color: white;
   font-weight:bold;
   font-size: 34px;
@@ -227,7 +204,6 @@
 }
 
 .TeamBlueSpielerinStats{
-  font-family: Zona Pro;
   color: white;
   width: 266px;
   height: 60px;
@@ -242,7 +218,6 @@
 }
 
 .TeamOrangeSpielerinStats{
-  font-family: Zona Pro;
   color: white;
   width: 266px;
   height: 60px;
