@@ -1,0 +1,120 @@
+*{
+    /* box-sizing: border-box; */
+    font-family: 'Sora Uni Countdown';
+    color:white;
+    font-size:32px;
+    /* outline: solid 2px coral; */
+}
+
+.imgfs{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:1920px;
+    height:1080px;
+  }
+  
+/*Stats Box und Stats*/
+
+.StatsBox{
+    position:absolute;
+    background-color: rgba(0,0,0,0.8);
+    left: 50%;
+    transform: translate(-50%);
+    top:120px;
+    width:860px;
+    height:680px;
+    border-radius:20px;
+}
+
+.StatsGrid{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display:grid;
+    grid-template-columns: repeat(3,220px);
+    grid-template-rows: repeat(5, 120px);
+}
+
+.num{
+    font-family: 'Sora Uni Countdown Semibold';
+    font-size:60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+    border-bottom: 3px solid white;
+}
+
+.txt{
+    font-size:40px;
+    justify-content: center;
+    font-family: 'Sora Uni Light';
+    text-align:center;
+    color: #00E9C5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 3px solid white;
+}
+
+.StatsGrid :nth-last-child(-n+3) {
+    border-bottom: none;
+}
+
+/*Spieler Infos*/
+
+.Spielerbild{
+    position:absolute;
+    top:240px;
+    border-bottom:4px solid white;
+    width:450px;
+}
+
+#Spieler1Bild{
+    left:140px;
+}
+
+#Spieler2Bild{
+    right:140px;
+}
+
+#team1logo{
+    position:absolute;
+    top:840px;
+    left:140px;
+    width:100px;
+}
+
+#team2logo{
+    position:absolute;
+    top:840px;
+    right:140px;
+    width:100px;
+}
+
+.Spielername{
+    position:absolute;
+    font-size:60px;
+    font-family:'Sora Uni Countdown Semibold';
+    top:840px;
+    height:100px;
+    width:500px;
+    text-transform:uppercase;
+    display:inline-block;
+    line-height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#Spieler1Name{
+    left:260px;
+    text-align:left;
+}
+
+#Spieler2Name{
+    right:260px;
+    text-align:right;
+}
