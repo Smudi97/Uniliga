@@ -2,17 +2,47 @@
     /* box-sizing: border-box; */
     font-family: 'Sora Uni';
     /* outline: solid 2px coral; */
-  }
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0; transform: translateY(50px)}
+    100% {opacity: 1; transform: translateY(0px)}
+}
 
 :root{
     --offsetleft: 650px;
+}
+
+.Anim1{
+    opacity:0;
+    animation:fadeIn 1s ease-in-out 1.4s forwards;
+}
+
+.Anim2{
+    opacity:0;
+    animation:fadeIn 1s ease-in-out 1.6s forwards;
+}
+
+.Anim3{
+    opacity:0;
+    animation:fadeIn 1s ease-in-out 1.8s forwards;
+}
+
+.Anim4{
+    opacity:0;
+    animation:fadeIn 1s ease-in-out 2s forwards;
+}
+
+.Anim5{
+    opacity:0;
+    animation:fadeIn 1s ease-in-out 2.2s forwards;
 }
 
 /*Team Name Box*/
 
 .TeamContainer{
     position:absolute;
-    top:257px;
+    top:348px;
     left:650px;
     width: 990px;
     height: 70px;
@@ -44,7 +74,7 @@
 .HeroesContainer{
     position:absolute;
     left:var(--offsetleft);
-    top:347px;
+    top:438px;
     display: flex;
     justify-content: flex-start;
 }
@@ -70,7 +100,7 @@
 .NamenContainer{
     position:absolute;
     left:calc(var(--offsetleft) - 10px);
-    top:667px;
+    top:758px;
     display: flex;
     justify-content: flex-start;
 }
@@ -103,7 +133,7 @@
 .IconContainer{
     position:absolute;
     left:calc(var(--offsetleft) + 130px);
-    top:357px;
+    top:448px;
     display: flex;
     justify-content: flex-start;
 }
