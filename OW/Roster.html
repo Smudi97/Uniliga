@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Overwatch Roster Screen</title>
+    <link rel="stylesheet" href="./Roster.css">
+
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
+
+<div class="TeamContainer">
+    <div id="TeamName"></div>
+    <img id="TeamLogo">
+</div>
+
+<div class="HeroesContainer">
+    <div class="HeroBox">
+        <img id="Spieler1Held">
+    </div>
+    <div class="HeroBox">
+        <img id="Spieler2Held">
+    </div>
+    <div class="HeroBox">
+        <img id="Spieler3Held">
+    </div>
+    <div class="HeroBox">
+        <img id="Spieler4Held">
+    </div>
+    <div class="HeroBox">
+        <img id="Spieler5Held">
+    </div>
+</div>
+
+<div class="NamenContainer">
+    <div class="NamenBox">
+        <span id="Spieler1Name"></span>
+    </div>
+    <div class="NamenBox">
+        <span id="Spieler2Name"></span>
+    </div>
+    <div class="NamenBox">
+        <span id="Spieler3Name"></span>
+    </div>
+    <div class="NamenBox">
+        <span id="Spieler4Name"></span>
+    </div>
+    <div class="NamenBox">
+        <span id="Spieler5Name"></span>
+    </div>
+</div>
+
+<div class="IconContainer">
+    <img id="Spieler1Rolle">
+    <img id="Spieler2Rolle">
+    <img id="Spieler3Rolle">
+    <img id="Spieler4Rolle">
+    <img id="Spieler5Rolle">
+</div>
+
+<img id="Spieler1Held">
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B1': 'TeamName',
+              'B3': 'Spieler1Name',
+              'B6': 'Spieler2Name',
+              'B9': 'Spieler3Name',
+              'B12': 'Spieler4Name',
+              'B15': 'Spieler5Name',
+            },
+            "image": {
+              'B2': 'TeamLogo',
+              'B4': 'Spieler1Rolle',
+              'B5': 'Spieler1Held',
+              'B7': 'Spieler2Rolle',
+              'B8': 'Spieler2Held',
+              'B10': 'Spieler3Rolle',
+              'B11': 'Spieler3Held',
+              'B13': 'Spieler4Rolle',
+              'B14': 'Spieler4Held',
+              'B16': 'Spieler5Rolle',
+              'B17': 'Spieler5Held',
+            }
+        }
+
+        const spreadsheetID = '14d9nxy7f5DH8j5pop-PH1D96ifHR6-1g_kWkSywyXk0';
+        const worksheetName = 'rosteroutput';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>
