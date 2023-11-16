@@ -1,6 +1,8 @@
+@import url('../fonts.css');
+
 *{
-    /* box-sizing: border-box; */
-    font-family: 'Sora Uni Countdown';
+    box-sizing: border-box;
+    font-family: 'Sora Uni';
     color:white;
     font-size:32px;
     /* outline: solid 2px coral; */
@@ -38,7 +40,7 @@
 }
 
 .num{
-    font-weight:300;
+    font-family:'Sora Uni Countdown';
     font-size:60px;
     display: flex;
     flex-direction: column;
@@ -48,10 +50,9 @@
 }
 
 .txt{
+    font-weight:200;
     font-size:40px;
     justify-content: center;
-    font-family: 'Sora Uni';
-    font-weight:100;
     text-align:center;
     color: #00E9C5;
     display: flex;
@@ -98,7 +99,6 @@
 .Spielername{
     position:absolute;
     font-size:60px;
-    font-family:'Sora Uni';
     font-weight:700;
     top:840px;
     height:100px;

@@ -1,0 +1,35 @@
+@font-face{
+    font-family: 'Sora Uni';
+    font-weight:200;
+    src: url('./Sora-Uni-Light.ttf');
+}
+@font-face{
+    font-family: 'Sora Uni';
+    font-weight:400;
+    src: url('./Sora-Uni-Regular.ttf');
+}
+@font-face{
+    font-family: 'Sora Uni';
+    font-weight:700;
+    src: url('./Sora-Uni-Bold.ttf');
+}
+@font-face{
+    font-family: 'Sora Uni';
+    font-weight:900;
+    src: url('./Sora-Uni-ExtraBold.ttf');
+}
+@font-face{
+    font-family: 'Sora Uni';
+    font-weight:200;
+    src: url('./Sora-Uni-Light.ttf');
+}
+@font-face{
+    font-family: 'Sora Uni Countdown';
+    font-weight:400;
+    src: url('./Sora-Uni-Countdown-Regular.ttf');
+}
+@font-face{
+    font-family: 'Sora Uni Countdown';
+    font-weight:600;
+    src: url('./Sora-Uni-Countdown-Semibold.ttf');
+}
