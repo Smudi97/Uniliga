@@ -38,7 +38,7 @@
 }
 
 .num{
-    font-family: 'Sora Uni Countdown Semibold';
+    font-weight:300;
     font-size:60px;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,8 @@
 .txt{
     font-size:40px;
     justify-content: center;
-    font-family: 'Sora Uni Light';
+    font-family: 'Sora Uni';
+    font-weight:100;
     text-align:center;
     color: #00E9C5;
     display: flex;
@@ -97,7 +98,8 @@
 .Spielername{
     position:absolute;
     font-size:60px;
-    font-family:'Sora Uni Countdown Semibold';
+    font-family:'Sora Uni';
+    font-weight:700;
     top:840px;
     height:100px;
     width:500px;
