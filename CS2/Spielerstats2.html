@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>CS Spieler Stats 2</title>
+    <link rel="stylesheet" href="./SpielerStats.css">
+
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
+
+    <img src="./Sponsoren.png" class="imgfs">
+
+    <div class="StatsBox">
+        <div class="StatsGrid">
+            <div class="num" id="Spieler1KD"></div>
+            <span class="txt">KD</span>
+            <div class="num" id="Spieler2KD"></div>
+            <div class="num" id="Spieler1ADR"></div>
+            <span class="txt">ADR</span>
+            <div class="num" id="Spieler2ADR"></div>
+            <div class="num" id="Spieler1HS"></div>
+            <span class="txt">HS%</span>
+            <div class="num" id="Spieler2HS"></div>
+            <div class="num" id="Spieler1Rating"></div>
+            <span class="txt">KPR</span>
+            <div class="num" id="Spieler2Rating"></div>
+            <div class="num" id="Spieler1OKSR"></div>
+            <span class="txt">OKSR</span>
+            <div class="num" id="Spieler2OKSR"></div>
+        </div>
+    </div>
+
+    <img id="team1logo"></img>
+    <span class="Spielername" id="Spieler1Name"></span>
+    <img id="team2logo"></img>
+    <span class="Spielername" id="Spieler2Name"></span>
+
+    <img class="Spielerbild" id="Spieler1Bild"></img>
+    <img class="Spielerbild" id="Spieler2Bild"></img>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B3': 'team1name',
+              'B4': 'team2name',
+              'B7': 'Spieler1Name',
+              'B8': 'Spieler1KD',
+              'B9': 'Spieler1ADR',
+              'B10': 'Spieler1HS',
+              'B11': 'Spieler1Rating',
+              'B12': 'Spieler1OKSR',
+              'B13': 'Spieler2Name',
+              'B14': 'Spieler2KD',
+              'B15': 'Spieler2ADR',
+              'B16': 'Spieler2HS',
+              'B17': 'Spieler2Rating',
+              'B18': 'Spieler2OKSR',
+            },
+            "image": {
+              'B1': 'team1logo',
+              'B2': 'team2logo',
+              'B5': 'Spieler1Bild',
+              'B6': 'Spieler2Bild',
+            }
+        }
+
+        const spreadsheetID = '1aaOCiJbSxX0Di1Teny1w5F7j37bd3_nQG_ZxCDJ59mg';
+        const worksheetName = 's2output';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>
