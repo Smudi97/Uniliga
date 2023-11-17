@@ -48,17 +48,17 @@
     left:650px;
     width: 990px;
     height: 70px;
-    background-color: white;
+    background-color: #07004d;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 10px 10px #07004d;
+    box-shadow: 10px 10px #00e9c5;
 }
 
 #TeamName {
     max-width: 850px;
     font-size:45px;
-    color:#07004d;
+    color:white;
     font-weight:bold;
     white-space: nowrap;
     overflow: hidden;
