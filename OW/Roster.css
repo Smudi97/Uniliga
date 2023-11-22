@@ -124,7 +124,8 @@
     position:relative;
     margin-left:10px;
     margin-right:20px;
-    font-family:'Sora Uni Light';
+    font-family:'Sora Uni';
+    font-weight:200;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
