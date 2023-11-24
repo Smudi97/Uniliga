@@ -10,82 +10,52 @@
 
 <body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
 
-  <div class="AnimLeft TeamLeftBox">
-    <span>Goals</span>
-    <span>Shots</span>
-    <span>assists</span>
-    <span>saves</span>
-    <span>team shot%</span>
-    <span>avg team speed</span>
-  </div>
+  <img class="AnimLeft imgfs" src="iconsleft.png">
+  <img class="AnimRight imgfs" src="iconsright.png">
 
-  <div class="AnimRight TeamRightBox">
-    <span>Goals</span>
-    <span>Shots</span>
-    <span>assists</span>
-    <span>saves</span>
-    <span>team shot%</span>
-    <span>avg team speed</span>
+  <div class="TitleGrid AnimCenter">
+    <span id="TitleRow1">team stats vergleich</span>
+    <span id="TitleRow2">pro spiel</span>
+    <span id="TitleRow3">vs</span>
   </div>
-
-  <img class="AnimLeft" src="iconsleft.png" id="iconsleft">
-  <img class="AnimRight" src="iconsright.png" id="iconsright">
-  <img class="AnimCenter" src="center.png" id="TeamStatscPNG">
   
+  <div class="AnimLeft StatsTitleBox StatsTitleLeft">
+    <span>Goals</span>
+    <span>Shots</span>
+    <span>assists</span>
+    <span>saves</span>
+    <span>team shot%</span>
+    <span>avg team speed</span>
+  </div>
 
-  <!-- <img class="AnimCenter" id="TeamStatscPNG"> -->
-    <table class="AnimLeft">
-      <tr>
-        <td class= "TeamBlueStats" id="TeamBlueGoalsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamBlueStats" id="TeamBlueShotsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamBlueStats" id="TeamBlueAssistsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamBlueStats" id="TeamBlueSavesPerGame"></td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td class= "TeamBlueStats2 AnimLeft" id="TeamBlueShotPerc"></td>
-      </tr>
-      <tr>
-        <td class= "TeamBlueStats2 AnimLeft" id="TeamBlueAvgSpeed"></td>
-      </tr>
-    </table>
-    <div>
-      <span class="TeamBlue AnimBottomText" id="TeamBlueTeamname"></span>
-    </div>
-    <img class="AnimBottomLogo" id="TeamBlueLogoLink">
-    <table>
-      <tr>
-        <td class= "TeamOrangeStats AnimRight" id="TeamOrangeGoalsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeStats AnimRight" id="TeamOrangeShotsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeStats AnimRight" id="TeamOrangeAssistsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeStats AnimRight" id="TeamOrangeSavesPerGame"></td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td class= "TeamOrangeStats2 AnimRight" id="TeamOrangeShotPerc"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeStats2 AnimRight" id="TeamOrangeAvgSpeed"></td>
-      </tr>
-    </table>
-    <div>
-      <span class="TeamOrange AnimTop" id="TeamOrangeTeamname"></span>
-    </div>
-    <img class="AnimTop" id="TeamOrangeLogoLink">
+  <div class="AnimRight StatsTitleBox StatsTitleRight">
+    <span>Goals</span>
+    <span>Shots</span>
+    <span>assists</span>
+    <span>saves</span>
+    <span>team shot%</span>
+    <span>avg team speed</span>
+  </div>
+
+  <div class="StatsContainer">
+    <div class="StatsOffset AnimLeft" id="TeamBlueGoalsPerGame"></div>
+    <div class="StatsOffset AnimLeft" id="TeamBlueShotsPerGame"></div>
+    <div class="StatsOffset AnimLeft" id="TeamBlueAssistsPerGame"></div>
+    <div class="StatsOffset AnimLeft" id="TeamBlueSavesPerGame"></div>
+    <div class="AnimLeft" id="TeamBlueShotPerc"></div>
+    <div class="AnimLeft" id="TeamBlueAvgSpeed"></div>
+    <div class="StatsOffset AnimRight" id="TeamOrangeGoalsPerGame"></div>
+    <div class="StatsOffset AnimRight" id="TeamOrangeShotsPerGame"></div>
+    <div class="StatsOffset AnimRight" id="TeamOrangeAssistsPerGame"></div>
+    <div class="StatsOffset AnimRight" id="TeamOrangeSavesPerGame"></div>
+    <div class="AnimRight" id="TeamOrangeShotPerc"></div>
+    <div class="AnimRight" id="TeamOrangeAvgSpeed"></div>
+  </div>
+
+  <div class="AnimBottomText TeamName" id="TeamBlueTeamname"></div>
+  <img class="AnimBottomLogo TeamLogo" id="TeamBlueLogo">
+  <div class="AnimTop TeamName" id="TeamOrangeTeamname"></div>
+  <img class="AnimTop TeamLogo" id="TeamOrangeLogo">
 
     <!-- JAVASCRIPT STUFF -->
     <script src="./Updater.js"></script>
@@ -109,8 +79,8 @@
               'B17': 'TeamOrangeTeamname',
             },
             "image": {
-              'B8': 'TeamBlueLogoLink',
-              'B16': 'TeamOrangeLogoLink',
+              'B8': 'TeamBlueLogo',
+              'B16': 'TeamOrangeLogo',
             }
         }
 

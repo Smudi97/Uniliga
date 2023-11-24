@@ -1,264 +1,196 @@
+@import url('../fonts.css');
+
+/* Animationen */
+
 @keyframes fadeInCenter{
   0% {opacity:0}
-  70% {opacity:0}
   100% {opacity:1}
 }
 
 @keyframes fadeInRight{
-  0% {opacity:0}
-  30% {opacity:0; transform: translateX(50px)}
+  0% {opacity:0; transform: translateX(50px)}
   100% {opacity:1; transform: translateX(0)}
 }
 
 @keyframes fadeInLeft{
-  0% {opacity:0}
-  30% {opacity:0; transform: translateX(-50px)}
+  0% {opacity:0; transform: translateX(-50px)}
   100% {opacity:1; transform: translateX(0)}
 }
 
 @keyframes fadeInBottomLogo{
-  0% {opacity:0}
-  60% {opacity:0; transform: translateY(50px)}
+  0% {opacity:0; transform: translateY(50px)}
   100% {opacity:1; transform: translateX(0)}
 }
 
 @keyframes fadeInBottomText{
-  0% {opacity:0;}
-  60% {opacity:0; transform: translateY(50px) rotate(180deg)}
+  0% {opacity:0; transform: translateY(50px) rotate(180deg)}
   100% {opacity:1; transform: translateY(0px) rotate(180deg)}
 }
 
 @keyframes fadeInTop{
-  0% {opacity:0}
-  60% {opacity:0; transform: translateY(-50px)}
+  0% {opacity:0; transform: translateY(-50px)}
   100% {opacity:1; transform: translateX(0)}
 }
 
 .AnimLeft{
-  animation: fadeInLeft 1.3s ease-in-out;
+  opacity:0;
+  animation: fadeInLeft 1s ease-in-out 1s forwards;
 }
 
 .AnimRight{
-  animation: fadeInRight 1.3s ease-in-out;
+  opacity:0;
+  animation: fadeInRight 1s ease-in-out 1s forwards;
 }
 
 .AnimTop{
-  animation: fadeInTop 2s ease-in-out;
+  opacity:0;
+  animation: fadeInTop 1s ease-in-out 1.7s forwards;
 }
 
 .AnimBottomLogo{
-  animation: fadeInBottomLogo 2s ease-in-out;
+  opacity:0;
+  animation: fadeInBottomLogo 1s ease-in-out 1.7s forwards;
 }
 
 .AnimBottomText{
-  animation: fadeInBottomText 2s ease-in-out;
+  opacity:0;
+  animation: fadeInBottomText 1s ease-in-out 1.7s forwards;
 }
 
 .AnimCenter{
-  animation: fadeInCenter 1.3s ease-in-out;
+  opacity:0;
+  animation: fadeInCenter 1s ease-in-out 1s forwards;
 }
 
 *{
   box-sizing: border-box;
   font-family: 'Sora Uni';
   /* outline: solid coral 2px; */
+  color:white;
 }
 
-.TeamLeftBox{
+.imgfs{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:1920px;
+  height:1080px;
+}
+
+/*Titles*/
+
+.TitleGrid{
+  display:grid;
+  text-align:center;
+  text-transform:uppercase;
+  font-weight:600;
+}
+
+#TitleRow1{
+  font-size:59px;
+  padding-top:75px;
+}
+
+#TitleRow2{
+  font-size:30px;
+}
+
+#TitleRow3{
+  color:rgba(0,0,0,0);
+  padding-top:250px;
+  font-size:120px;
+  -webkit-text-stroke:1px white;
+}
+
+/*Stats Titles*/
+
+.StatsTitleBox{
   border-radius:10px;
   background:rgba(0,0,0,0.6);
   padding-top:40px;
   padding-bottom:90px;
-  color:white;
   font-size:32px;
+  font-weight:700;
   display:grid;
   grid-row-gap:68.5px;
   grid-template: auto / 441px;
   position:absolute;
   top:202px;
+  text-align:center;
+  text-transform:uppercase;
+  z-index:-1;
+}
+
+.StatsTitleLeft{
   left:322px;
-  text-align:center;
-  text-transform:uppercase;
 }
-.TeamRightBox{
-  border-radius:10px;
-  background:rgba(0,0,0,0.6);
-  padding-top:40px;
-  padding-bottom:90px;
-  color:white;
-  font-size:32px;
-  display:grid;
-  grid-row-gap:68.5px;
-  grid-template: auto / 441px;
-  position:absolute;
-  top:202px;
+
+.StatsTitleRight{
   right:322px;
+}
+
+/*Stats Numbers*/
+
+.StatsContainer{
+  position:absolute;
+  top:288px;
+  display:grid;
+  left: 50%;
+  transform: translate(-50%);
+  font-size:34px;
+  grid-template-rows:repeat(6,109px);
+  grid-template-columns:repeat(2,441px);
+  grid-column-gap:394px;
+  grid-auto-flow: column;
   text-align:center;
-  text-transform:uppercase;
 }
 
-#iconsleft{
+.StatsOffset{
+  padding-left:75px;
+}
+
+/*Teamnamen und Logos*/
+
+.TeamName{
+  font-weight: 1000;
+  text-transform: uppercase;
+  font-size: 60px;
   position:absolute;
-  left:0px;
-  top:0px;
-  width: 1920px;
-  height: 1080px;
+  height: 580px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: left;
 }
 
-#iconsright{
-  position:absolute;
-  left:0px;
-  top:0px;
-  width: 1920px;
-  height: 1080px;
-}
-
-#TeamStatscPNG{
-  position:absolute;
-  left:0px;
-  top:0px;
-  width: 1920px;
-  height: 1080px;
-}
-
-.TeamBlueStats{
-  color: white;
+.TeamLogo{
   position: absolute;
-  left: 530px;
-  width: 100px;
-  font-size: 34px;
-  text-align: center;
-}
-
-.TeamBlueStats2{
-  color: white;
-  position: absolute;
-  left: 392px;
-  width: 300px;
-  font-size: 34px;
-  text-align: center;
-}
-
-#TeamBlueGoalsPerGame{
-  top: 288px;
-}
-
-#TeamBlueShotsPerGame{
-  top: 397px;
-}
-
-#TeamBlueAssistsPerGame{
-  top: 504px;
-}
-
-#TeamBlueSavesPerGame{
-  top: 613px;
-}
-
-#TeamBlueShotPerc{
-  top: 722px;
-}
-
-#TeamBlueAvgSpeed{
-  top: 831px;
+  max-width: 120px;
+  max-height: 120px;
 }
 
 #TeamBlueTeamname{
-  font-weight: 1000;
-  color: white;
-  text-transform: uppercase;
   transform: rotate(180deg);
   writing-mode: tb-rl;
-  font-size: 60px;
-  position:absolute;
   right: 1615px;
   bottom: 165px;
-  height: 580px;
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-align: left;
 }
 
-#TeamBlueLogoLink{
-  position: absolute;
-  max-width: 120px;
-  max-height: 120px;
+#TeamBlueLogo{
   right: 1615px;
   top: 200px;
-}
-
-.TeamOrangeStats{
-  color: white;
-  position: absolute;
-  right: 453px;
-  width: 100px;
-  font-size: 34px;
-  /* outline: solid coral; */
-  text-align: center;
-}
-
-.TeamOrangeStats2{
-  color: white;
-  position: absolute;
-  right: 390px;
-  width: 300px;
-  font-size: 34px;
-  /* outline: solid coral; */
-  text-align: center;
-}
-
-#TeamOrangeGoalsPerGame{
-  top: 288px;
-}
-
-#TeamOrangeShotsPerGame{
-  top: 397px;
-}
-
-#TeamOrangeAssistsPerGame{
-  top: 504px;
-}
-
-#TeamOrangeSavesPerGame{
-  top: 613px;
-}
-
-#TeamOrangeShotPerc{
-  top: 722px;
-}
-
-#TeamOrangeAvgSpeed{
-  top: 831px;
 }
 
 #TeamOrangeTeamname{
-  font-weight: 1000;
-  color: white;
-  text-transform: uppercase;
-  transform: rotate(deg);
   writing-mode: vertical-rl;
-  font-size: 60px;
-  position:absolute;
   left: 1615px;
   top: 200px;
-  height: 580px;
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-align: left;
 }
 
-#TeamOrangeLogoLink{
-  position: absolute;
-  max-width: 120px;
-  max-height: 120px;
+#TeamOrangeLogo{
   left: 1615px;
   bottom: 165px;
 }
