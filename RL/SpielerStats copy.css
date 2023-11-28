@@ -87,6 +87,7 @@
 .StatsOffset{
   padding-left:65px;
   font-family: 'Sora Uni Countdown';
+  width:255px;
 }
 
 .Stats{
@@ -118,6 +119,8 @@
   white-space:nowrap;
   text-overflow:ellipsis;
 }
+
+/*Stats Backgrounds*/
 
 .StatsBgContainer{
   position: absolute;
