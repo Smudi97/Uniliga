@@ -16,13 +16,13 @@
  font-family:'Sora Uni';
 }
 
-.AnimLeft{
+/* .AnimLeft{
   animation: fadeInLeft 1.3s ease-in-out;
 }
 
 .AnimRight{
   animation: fadeInRight 1.3s ease-in-out;
-}
+} */
 
 .SpielerStatslBox{
   position: absolute;
