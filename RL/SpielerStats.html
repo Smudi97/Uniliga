@@ -10,96 +10,66 @@
 
 <body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
 
-<img class="AnimLeft" src="spielerstatslicons.png" id="SpielerStatslPNG">
-<img class="AnimRight" src="spielerstatsricons.png" id="SpielerStatsrPNG">
+<img class="AnimLeft imgfs" src="spielerstatslicons.png" id="SpielerStatslPNG">
+<img class="AnimRight imgfs" src="spielerstatsricons.png" id="SpielerStatsrPNG">
 
-<div class="AnimLeft">
-  <div class="SpielerStatslBox"></div>
-  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein1"></div>
-  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein2"></div>
-  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein3"></div>
-  <img id="SpielerStatslPNG">
+<div class="AnimLeft TeamContainer TeamLeft">
+  <div class="TeamName" id="TeamBlueName"></div>
+  <img class="TeamLogo" id="TeamBlueLogo"></img>
 </div>
 
-<div class="AnimRight">
-  <div class="SpielerStatsrBox"></div>
-  <div class="SpielerStatsrBoxKlein" id="SpielerStatsrBoxKlein1"></div>
-  <div class="SpielerStatsrBoxKlein" id="SpielerStatsrBoxKlein2"></div>
-  <div class="SpielerStatsrBoxKlein" id="SpielerStatsrBoxKlein3"></div>
-  <img id="SpielerStatsrPNG">
+<div class="AnimRight TeamContainer TeamRight">
+  <div class="TeamName" id="TeamOrangeName"></div>
+  <img class="TeamLogo" id="TeamOrangeLogo"></img>
 </div>
 
-<div class="TeamNamenTable"> 
-  <table class="TeamNamen">
-    <tr>
-      <td  class= "TeamNamenText AnimLeft" id="TeamBlueTeamname"></td>
-      <td  class= "TeamNamenText" id="SpacerTeams"></td>
-      <td  class= "TeamNamenText AnimRight" id="TeamOrangeTeamname"></td>
-    </tr>
-    <tr>
-      <td  class= "TeamNamenText AnimLeft"><img id="TeamBlueLogoLink"></td>
-      <td  class= "TeamNamenText" id="SpacerTeams"></td>
-      <td  class= "TeamNamenText AnimRight"><img id="TeamOrangeLogoLink"></td>
-    </tr>
-  </div>
-
-<div class="SpielerNamenBlue AnimLeft">
-  <span class= "SpielerNamenBlueLine" id="TeamBlueSpielerin1Name"></span>
-  <span class= "SpielerNamenBlueLine" id="TeamBlueSpielerin2Name"></span>
-  <span class= "SpielerNamenBlueLine" id="TeamBlueSpielerin3Name"></span>
+<div class="AnimLeft Stats StatsLeft">
+    <div class= "SpielerName" id="T1S1Name"></div>
+    <div class= "SpielerName" id="T1S2Name"></div>
+    <div class= "SpielerName" id="T1S3Name"></div>
+    <div class= "StatsOffset" id="T1S1GoalsPerGame"></div>
+    <div class= "StatsOffset" id="T1S2GoalsPerGame"></div>
+    <div class= "StatsOffset" id="T1S3GoalsPerGame"></div>
+    <div class= "StatsOffset" id="T1S1SavesPerGame"></div>
+    <div class= "StatsOffset" id="T1S2SavesPerGame"></div>
+    <div class= "StatsOffset" id="T1S3SavesPerGame"></div>
+    <div class= "StatsOffset" id="T1S1AssistsPerGame"></div>
+    <div class= "StatsOffset" id="T1S2AssistsPerGame"></div>
+    <div class= "StatsOffset" id="T1S3AssistsPerGame"></div>
+    <div class= "StatsOffset" id="T1S1ShotPerc"></div>
+    <div class= "StatsOffset" id="T1S2ShotPerc"></div>
+    <div class= "StatsOffset" id="T1S3ShotPerc"></div>
 </div>
-<div class="SpielerNamenOrange AnimRight">
-    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin1Name"></span>
-    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin2Name"></span>
-    <span class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin3Name"></span>
-  </div>
-  
-</table>
-    <table class="TeamBlueStats AnimLeft">
-        <tr>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1GoalsPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2GoalsPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3GoalsPerGame"></td>
-        </tr>
-        <tr>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1SavesPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2SavesPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3SavesPerGame"></td>
-        </tr>
-        <tr>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1AssistsPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2AssistsPerGame"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3AssistsPerGame"></td>
-        </tr>
-        <tr>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1ShotPerc"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2ShotPerc"></td>
-          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3ShotPerc"></td>
-        </tr>
-    </table>
 
-    <table class="TeamOrangeStats AnimRight">
-      <tr>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1GoalsPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2GoalsPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3GoalsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1SavesPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2SavesPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3SavesPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1AssistsPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2AssistsPerGame"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3AssistsPerGame"></td>
-      </tr>
-      <tr>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1ShotPerc"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2ShotPerc"></td>
-        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3ShotPerc"></td>
-      </tr>
-  </table>
+<div class="AnimRight Stats StatsRight">
+  <div class= "SpielerName" id="T2S1Name"></div>
+  <div class= "SpielerName" id="T2S2Name"></div>
+  <div class= "SpielerName" id="T2S3Name"></div>
+  <div class= "StatsOffset" id="T2S1GoalsPerGame"></div>
+  <div class= "StatsOffset" id="T2S2GoalsPerGame"></div>
+  <div class= "StatsOffset" id="T2S3GoalsPerGame"></div>
+  <div class= "StatsOffset" id="T2S1SavesPerGame"></div>
+  <div class= "StatsOffset" id="T2S2SavesPerGame"></div>
+  <div class= "StatsOffset" id="T2S3SavesPerGame"></div>
+  <div class= "StatsOffset" id="T2S1AssistsPerGame"></div>
+  <div class= "StatsOffset" id="T2S2AssistsPerGame"></div>
+  <div class= "StatsOffset" id="T2S3AssistsPerGame"></div>
+  <div class= "StatsOffset" id="T2S1ShotPerc"></div>
+  <div class= "StatsOffset" id="T2S2ShotPerc"></div>
+  <div class= "StatsOffset" id="T2S3ShotPerc"></div>
+</div>
+
+<div class="AnimLeft StatsBgContainer BgContainerLeft">
+  <div class="StatsBgBox BgBoxLeft"></div>
+  <div class="StatsBgBox BgBoxLeft"></div>
+  <div class="StatsBgBox BgBoxLeft"></div>
+</div>
+
+<div class="AnimRight StatsBgContainer BgContainerRight">
+<div class="StatsBgBox BgBoxRight"></div>
+<div class="StatsBgBox BgBoxRight"></div>
+<div class="StatsBgBox BgBoxRight"></div>
+</div>
 
     <!-- JAVASCRIPT STUFF -->
     <script src="./Updater.js"></script>
@@ -107,42 +77,42 @@
     <script>
         const settings = {
             'string': {
-              'B9': 'TeamBlueTeamname',
-              'B17': 'TeamOrangeTeamname',
-              'B18': 'TeamBlueSpielerin1GoalsPerGame',
-              'B19': 'TeamBlueSpielerin1SavesPerGame',
-              'B20': 'TeamBlueSpielerin1AssistsPerGame',
-              'B21': 'TeamBlueSpielerin1ShotPerc',
-              'B22': 'TeamBlueSpielerin1Name',
-              'B23': 'TeamBlueSpielerin2GoalsPerGame',
-              'B24': 'TeamBlueSpielerin2SavesPerGame',
-              'B25': 'TeamBlueSpielerin2AssistsPerGame',
-              'B26': 'TeamBlueSpielerin2ShotPerc',
-              'B27': 'TeamBlueSpielerin2Name',
-              'B28': 'TeamBlueSpielerin3GoalsPerGame',
-              'B29': 'TeamBlueSpielerin3SavesPerGame',
-              'B30': 'TeamBlueSpielerin3AssistsPerGame',
-              'B31': 'TeamBlueSpielerin3ShotPerc',
-              'B32': 'TeamBlueSpielerin3Name',
-              'B33': 'TeamOrangeSpielerin1GoalsPerGame',
-              'B34': 'TeamOrangeSpielerin1SavesPerGame',
-              'B35': 'TeamOrangeSpielerin1AssistsPerGame',
-              'B36': 'TeamOrangeSpielerin1ShotPerc',
-              'B37': 'TeamOrangeSpielerin1Name',
-              'B38': 'TeamOrangeSpielerin2GoalsPerGame',
-              'B39': 'TeamOrangeSpielerin2SavesPerGame',
-              'B40': 'TeamOrangeSpielerin2AssistsPerGame',
-              'B41': 'TeamOrangeSpielerin2ShotPerc',
-              'B42': 'TeamOrangeSpielerin2Name',
-              'B43': 'TeamOrangeSpielerin3GoalsPerGame',
-              'B44': 'TeamOrangeSpielerin3SavesPerGame',
-              'B45': 'TeamOrangeSpielerin3AssistsPerGame',
-              'B46': 'TeamOrangeSpielerin3ShotPerc',
-              'B47': 'TeamOrangeSpielerin3Name',
+              'B9': 'TeamBlueName',
+              'B17': 'TeamOrangeName',
+              'B18': 'T1S1GoalsPerGame',
+              'B19': 'T1S1SavesPerGame',
+              'B20': 'T1S1AssistsPerGame',
+              'B21': 'T1S1ShotPerc',
+              'B22': 'T1S1Name',
+              'B23': 'T1S2GoalsPerGame',
+              'B24': 'T1S2SavesPerGame',
+              'B25': 'T1S2AssistsPerGame',
+              'B26': 'T1S2ShotPerc',
+              'B27': 'T1S2Name',
+              'B28': 'T1S3GoalsPerGame',
+              'B29': 'T1S3SavesPerGame',
+              'B30': 'T1S3AssistsPerGame',
+              'B31': 'T1S3ShotPerc',
+              'B32': 'T1S3Name',
+              'B33': 'T2S1GoalsPerGame',
+              'B34': 'T2S1SavesPerGame',
+              'B35': 'T2S1AssistsPerGame',
+              'B36': 'T2S1ShotPerc',
+              'B37': 'T2S1Name',
+              'B38': 'T2S2GoalsPerGame',
+              'B39': 'T2S2SavesPerGame',
+              'B40': 'T2S2AssistsPerGame',
+              'B41': 'T2S2ShotPerc',
+              'B42': 'T2S2Name',
+              'B43': 'T2S3GoalsPerGame',
+              'B44': 'T2S3SavesPerGame',
+              'B45': 'T2S3AssistsPerGame',
+              'B46': 'T2S3ShotPerc',
+              'B47': 'T2S3Name',
             },
             "image": {
-              'B8': 'TeamBlueLogoLink',
-              'B16': 'TeamOrangeLogoLink',
+              'B8': 'TeamBlueLogo',
+              'B16': 'TeamOrangeLogo',
             }
         }
 

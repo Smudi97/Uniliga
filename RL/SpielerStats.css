@@ -1,228 +1,155 @@
-@keyframes fadeInLeft{
-  0% {opacity:0}
-  30% {opacity:0; transform: translateX(-50px)}
-  100% {opacity:1; transform: translateX(0)}
-}
+@import url('../fonts.css');
+
+/*Animationen*/
 
 @keyframes fadeInRight{
-  0% {opacity:0}
-  30% {opacity:0; transform: translateX(50px)}
+  0% {opacity:0; transform: translateX(50px)}
   100% {opacity:1; transform: translateX(0)}
 }
 
-*{
-  /* box-sizing: border-box; */
- /* outline: solid coral 2px; */
- font-family:'Sora Uni';
+@keyframes fadeInLeft{
+  0% {opacity:0; transform: translateX(-50px)}
+  100% {opacity:1; transform: translateX(0)}
 }
 
-/* .AnimLeft{
-  animation: fadeInLeft 1.3s ease-in-out;
+
+*{
+  box-sizing: border-box;
+  font-family: 'Sora Uni';
+  /* outline: solid coral 2px; */
+  color:white;
+}
+
+.imgfs{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:1920px;
+  height:1080px;
+}
+
+.AnimLeft{
+  opacity:0;
+  animation: fadeInLeft 1s ease-in-out 0.7s forwards;
 }
 
 .AnimRight{
-  animation: fadeInRight 1.3s ease-in-out;
-} */
+  opacity:0;
+  animation: fadeInRight 1s ease-in-out 0.7s forwards;
+}
 
-.SpielerStatslBox{
-  position: absolute;
-  width: 795px;
+/*Team Infos*/
+
+.TeamContainer{
+  position:absolute;
+  top:75px;
+  display:grid;
+  width:800px;
   height:500px;
-  top:70px;
-  left:100px;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 10px;
+  place-items:center;
+  font-size:55px;
+  text-transform:uppercase;
+  font-weight:700;
+  text-align:center;
+  background-color:rgba(0,0,0,0.5);
+  border-radius:10px;
 }
 
-.SpielerStatslBoxKlein{
-  position: absolute;
-  width: 256px;
-  height:340px;
-  top:580px;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 8px;
-}
-
-#SpielerStatslBoxKlein1{
-  position: absolute;
+.TeamLeft{
   left:100px;
 }
 
-#SpielerStatslBoxKlein2{
-  position: absolute;
-  left:370px;
-}
-
-#SpielerStatslBoxKlein3{
-  position: absolute;
-  left:640px;
-}
-
-.SpielerStatsrBox{
-  position: absolute;
-  width: 795px;
-  height:500px;
-  top:70px;
-  right:100px;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 10px;
-}
-
-.SpielerStatsrBoxKlein{
-  position: absolute;
-  width: 256px;
-  height:340px;
-  top:580px;
-  background-color: black;
-  opacity: 0.7;
-  border-radius: 8px;
-}
-
-#SpielerStatsrBoxKlein1{
-  position: absolute;
+.TeamRight{
   right:100px;
 }
 
-#SpielerStatsrBoxKlein2{
-  position: absolute;
-  right:370px;
-}
-
-#SpielerStatsrBoxKlein3{
-  position: absolute;
-  right:640px;
-}
-
-#SpielerStatsrPNG{
-  z-index:1;
+.TeamName{
   position:absolute;
-  left:0px;
-  top:0px;
-  width: 1920px;
-  height: 1080px;
+  top:80px;
+  transform: translateY(-50%);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 750px;
+  text-overflow: ellipsis;
 }
 
-#SpielerStatslPNG{
-  z-index:1;
+.TeamLogo{
   position:absolute;
-  left:0px;
-  top:0px;
-  width: 1920px;
-  height: 1080px;
+  max-width:300px;
+  max-height:300px;
+  top:160px;
 }
 
-.TeamNamenTable{
-  display: grid;
+/*Stats*/
+
+.StatsOffset{
+  padding-left:65px;
+  font-family: 'Sora Uni Countdown';
+  width:255px;
+}
+
+.Stats{
+  position:absolute;
+  top:592.5px;
+  width:800px;
+  display:grid;
+  grid-template-columns:repeat(3,255px);
+  grid-template-rows:repeat(5,68.6px);
+  grid-column-gap:17.5px;
+  text-align:center;
+  font-size:34px;
   place-items: center;
-}
-
-.TeamNamen{
   text-transform: uppercase;
-  position:absolute;
-  top: 90px;
 }
 
-.TeamNamenText{
-  color: white;
-  font-weight:1000;
-  height: 2em;
-  width: 745px;
-  font-size: 55px;
-  text-align: center;
-}
-#SpacerTeams{
-  width:185px;
+.StatsLeft{
+  left:100px;
 }
 
-#TeamBlueLogoLink{
-  max-width: 325px;
-  max-height: 325px;
+.StatsRight{
+  right:100px;
 }
 
-#TeamOrangeLogoLink{
-  max-width: 325px;
-  max-height: 325px;
-}
-
-.SpielerNamenBlue{
-  display:grid;
-  grid-template-columns: 225px 225px 225px;
-  justify-content: space-around;
-  color:white;
-  width: 815px;
-  height:3.5em;
-  align-items:center;
-  overflow: hidden;
-  text-transform: uppercase;
-  position:absolute;
-  top:590px;
-  left:90px;
-}
-
-.SpielerNamenBlueLine{
-  color: white;
-  font-weight:bold;
-  font-size: 34px;
-  text-align: center;
-  width: 225px;
+.SpielerName{
+  font-weight:700;
+  width:210px;
   overflow:hidden;
-  white-space: nowrap;
+  white-space:nowrap;
   text-overflow:ellipsis;
 }
 
-.SpielerNamenOrange{
-  display:grid;
-  grid-template-columns: 225px 225px 225px;
-  justify-content: space-around;
-  color:white;
-  width: 815px;
-  height:3.5em;
-  align-items:center;
+/*Stats Backgrounds*/
+
+.StatsBgContainer{
+  position: absolute;
+  top: 592.5px;
   overflow: hidden;
-  text-transform: uppercase;
-  position:absolute;
-  top:590px;
-  right:90px;
+  z-index:-1;
 }
 
-.SpielerNamenOrangeLine{
-  color: white;
-  font-weight:bold;
-  font-size: 34px;
-  text-align: center;
-  width: 225px;
-  overflow:hidden;
-  white-space: nowrap;
-  text-overflow:ellipsis;
+.BgContainerLeft{
+  left: 100px;
 }
 
-.TeamBlueStats{
-  position:absolute;
-  top:650px;
-  left:136px;
+.BgContainerRight{
+  right: 100px;
 }
 
-.TeamBlueSpielerinStats{
-  color: white;
-  width: 266px;
-  height: 60px;
-  font-size: 34px;
-  text-align: center;
+.StatsBgBox{
+  width: 255px;
+  height: 343px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
-.TeamOrangeStats{
-  position:absolute;
-  top:650px;
-  left: 1070px;;
+.BgBoxLeft{
+  margin-right: 17.5px;
+  float: left;
 }
 
-.TeamOrangeSpielerinStats{
-  color: white;
-  width: 266px;
-  height: 60px;
-  font-size: 34px;
-  text-align: center;
+.BgBoxRight{
+  margin-left: 17.5px;
+  float: right;
 }
