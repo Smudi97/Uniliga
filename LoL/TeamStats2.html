@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>CS Team Stats 2</title>
+    <link rel="stylesheet" href="./TeamStats.css">
+
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
+
+<img src="./Sponsoren.png" class="imgfs">
+
+<div id="bar"></div>
+
+<div class="SpielerBilderLeftGrid">
+  <img id="team1spieler1bild"></img>
+  <img id="team1spieler2bild"></img>
+  <img id="team1spieler3bild"></img>
+  <img id="team1spieler4bild"></img>
+  <img id="team1spieler5bild"></img>
+</div>
+
+<div class="SpielerBilderRightGrid">
+  <img id="team2spieler1bild"></img>
+  <img id="team2spieler2bild"></img>
+  <img id="team2spieler3bild"></img>
+  <img id="team2spieler4bild"></img>
+  <img id="team2spieler5bild"></img>
+</div>
+
+<img src="./teamsbg.png">
+
+<div class="TeamLogoContainer"> 
+  <img id="team1logo">
+  <img id="team2logo">
+</div>
+
+<div class="SpielerNamenLeftGrid">
+  <div class="namen" id="team1spieler1name"></div>
+  <div class="namen" id="team1spieler2name"></div>
+  <div class="namen" id="team1spieler3name"></div>
+  <div class="namen" id="team1spieler4name"></div>
+  <div class="namen" id="team1spieler5name"></div>
+  <div class="maps" id="team1spieler1maps"></div>
+  <div class="maps" id="team1spieler2maps"></div>
+  <div class="maps" id="team1spieler3maps"></div>
+  <div class="maps" id="team1spieler4maps"></div>
+  <div class="maps" id="team1spieler5maps"></div>
+</div>
+
+<div class="SpielerNamenRightGrid">
+  <div class="namen" id="team2spieler1name"></div>
+  <div class="namen" id="team2spieler2name"></div>
+  <div class="namen" id="team2spieler3name"></div>
+  <div class="namen" id="team2spieler4name"></div>
+  <div class="namen" id="team2spieler5name"></div>
+  <div class="maps" id="team2spieler1maps"></div>
+  <div class="maps" id="team2spieler2maps"></div>
+  <div class="maps" id="team2spieler3maps"></div>
+  <div class="maps" id="team2spieler4maps"></div>
+  <div class="maps" id="team2spieler5maps"></div>
+</div>
+
+<div class="SpielerStatsTitleGrid">
+  <span>KD</span>
+  <span>ADR</span>
+  <span>KPR</span>
+</div>
+
+<div class="SpielerStatsLeftGrid">
+  <div id="team1spieler1kd"></div>
+  <div id="team1spieler2kd"></div>
+  <div id="team1spieler3kd"></div>
+  <div id="team1spieler4kd"></div>
+  <div id="team1spieler5kd"></div>
+  <div id="team1spieler1adr"></div>
+  <div id="team1spieler2adr"></div>
+  <div id="team1spieler3adr"></div>
+  <div id="team1spieler4adr"></div>
+  <div id="team1spieler5adr"></div>
+  <div id="team1spieler1kpr"></div>
+  <div id="team1spieler2kpr"></div>
+  <div id="team1spieler3kpr"></div>
+  <div id="team1spieler4kpr"></div>
+  <div id="team1spieler5kpr"></div>
+</div>
+
+<div class="SpielerStatsRightGrid">
+  <div id="team2spieler1kd"></div>
+  <div id="team2spieler2kd"></div>
+  <div id="team2spieler3kd"></div>
+  <div id="team2spieler4kd"></div>
+  <div id="team2spieler5kd"></div>
+  <div id="team2spieler1adr"></div>
+  <div id="team2spieler2adr"></div>
+  <div id="team2spieler3adr"></div>
+  <div id="team2spieler4adr"></div>
+  <div id="team2spieler5adr"></div>
+  <div id="team2spieler1kpr"></div>
+  <div id="team2spieler2kpr"></div>
+  <div id="team2spieler3kpr"></div>
+  <div id="team2spieler4kpr"></div>
+  <div id="team2spieler5kpr"></div>
+</div>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B2': 'team1name',
+              'B4': 'team2name',
+              'B5': 'team1spieler1name',
+              'B6': 'team1spieler1maps',
+              'B7': 'team1spieler1kd',
+              'B8': 'team1spieler1adr',
+              'B9': 'team1spieler1kpr',
+              'B10': 'team1spieler2name',
+              'B11': 'team1spieler2maps',
+              'B12': 'team1spieler2kd',
+              'B13': 'team1spieler2adr',
+              'B14': 'team1spieler2kpr',
+              'B15': 'team1spieler3name',
+              'B16': 'team1spieler3maps',
+              'B17': 'team1spieler3kd',
+              'B18': 'team1spieler3adr',
+              'B19': 'team1spieler3kpr',
+              'B20': 'team1spieler4name',
+              'B21': 'team1spieler4maps',
+              'B22': 'team1spieler4kd',
+              'B23': 'team1spieler4adr',
+              'B24': 'team1spieler4kpr',
+              'B25': 'team1spieler5name',
+              'B26': 'team1spieler5maps',
+              'B27': 'team1spieler5kd',
+              'B28': 'team1spieler5adr',
+              'B29': 'team1spieler5kpr',
+              'B30': 'team2spieler1name',
+              'B31': 'team2spieler1maps',
+              'B32': 'team2spieler1kd',
+              'B33': 'team2spieler1adr',
+              'B34': 'team2spieler1kpr',
+              'B35': 'team2spieler2name',
+              'B36': 'team2spieler2maps',
+              'B37': 'team2spieler2kd',
+              'B38': 'team2spieler2adr',
+              'B39': 'team2spieler2kpr',
+              'B40': 'team2spieler3name',
+              'B41': 'team2spieler3maps',
+              'B42': 'team2spieler3kd',
+              'B43': 'team2spieler3adr',
+              'B44': 'team2spieler3kpr',
+              'B45': 'team2spieler4name',
+              'B46': 'team2spieler4maps',
+              'B47': 'team2spieler4kd',
+              'B48': 'team2spieler4adr',
+              'B49': 'team2spieler4kpr',
+              'B50': 'team2spieler5name',
+              'B51': 'team2spieler5maps',
+              'B52': 'team2spieler5kd',
+              'B53': 'team2spieler5adr',
+              'B54': 'team2spieler5kpr',
+            },
+            "image": {
+              'B1': 'team1logo',
+              'B3': 'team2logo',
+              'B55': 'team1spieler1bild',
+              'B56': 'team1spieler2bild',
+              'B57': 'team1spieler3bild',
+              'B58': 'team1spieler4bild',
+              'B59': 'team1spieler5bild',
+              'B60': 'team2spieler1bild',
+              'B61': 'team2spieler2bild',
+              'B62': 'team2spieler3bild',
+              'B63': 'team2spieler4bild',
+              'B64': 'team2spieler5bild',
+            }
+        }
+
+        const spreadsheetID = '1aaOCiJbSxX0Di1Teny1w5F7j37bd3_nQG_ZxCDJ59mg';
+        const worksheetName = 't2output';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>
