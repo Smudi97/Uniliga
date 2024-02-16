@@ -67,7 +67,7 @@
 .tabelleSpalte span:nth-child(odd){
   width:500px;
   padding-left: 20px;
-  border-left: solid #053d75 4px;
+  
 }
 
 .zeile{
@@ -83,4 +83,19 @@
   gap: 10px;
   grid-template-rows: repeat(8, 60px);
   place-items:center;
+}
+
+.playerInfo{
+  border-left: solid #053d75 4px;
+}
+
+.playerInfo span:nth-child(even){
+  font-weight: normal;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.playerInfo span:nth-child(odd){
+  padding-top: 7px;
+  font-size: 22px;
 }
