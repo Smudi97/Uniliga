@@ -87,6 +87,9 @@
 
 .playerInfo{
   border-left: solid #053d75 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .playerInfo span:nth-child(even){
@@ -96,6 +99,5 @@
 }
 
 .playerInfo span:nth-child(odd){
-  padding-top: 7px;
   font-size: 22px;
 }
