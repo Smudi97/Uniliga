@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>RL Spieler Stats</title>
+    <link rel="stylesheet" href="./TabelleTop8.css">
+
+</head>
+
+<body>
+
+  <div class="tabelleWrapper">
+    <div class="plätze">
+      <span>1.</span>
+      <span>2.</span>
+      <span>3.</span>
+      <span>4.</span>
+      <span>5.</span>
+      <span>6.</span>
+      <span>7.</span>
+      <span>8.</span>
+    </div>
+    <div class="tabelleSpalte">
+      <div class="zeile">
+        <div class="playerInfo">
+          <span id="Player1Name"></span>
+          <span id="Player1Stadt"></span>
+        </div>
+        <span id="Player1Score"></span>
+      </div>
+      <div class="zeile">
+        <div class="playerInfo">
+          <span id="Player2Name"></span>
+          <span id="Player2Stadt"></span>
+        </div>
+        <span id="Player2Score"></span>
+      </div>
+      <div class="zeile">
+        <div class="playerInfo">
+          <span id="Player3Name"></span>
+          <span id="Player3Stadt"></span>
+        </div>
+        <span id="Player3Score"></span>
+      </div>
+      <div class="zeile">
+        <div class="playerInfo">
+          <span id="Player4Name"></span>
+          <span id="Player4Stadt"></span>
+        </div>
+        <span id="Player4Score"></span>
+      </div>
+      <div class="zeile">
+        <div class="playerInfo">
+          <span id="Player5Name"></span>
+          <span id="Player5Stadt"></span>
+        </div>
+        <span id="Player5Score"></span>
+      </div>
+      <div class="zeile">
+        <div class="playerInfo">
+          <span id="Player6Name"></span>
+          <span id="Player6Stadt"></span>
+        </div>
+        <span id="Player6Score"></span>
+      </div>
+      <div class="zeile">
+        <div class="playerInfo">
+          <span id="Player7Name"></span>
+          <span id="Player7Stadt"></span>
+        </div>
+        <span id="Player7Score"></span>
+      </div>
+      <div class="zeile">
+        <div class="playerInfo">
+          <span id="Player8Name"></span>
+          <span id="Player8Stadt"></span>
+        </div>
+        <span id="Player8Score"></span>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="../Updater.js"></script>
+    <script src="../regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'A1': 'Player1Name',
+              'A2': 'Player2Name',
+              'A3': 'Player3Name',
+              'A4': 'Player4Name',
+              'A5': 'Player5Name',
+              'A6': 'Player6Name',
+              'A7': 'Player7Name',
+              'A8': 'Player8Name',
+              'B1': 'Player1Score',
+              'B2': 'Player2Score',
+              'B3': 'Player3Score',
+              'B4': 'Player4Score',
+              'B5': 'Player5Score',
+              'B6': 'Player6Score',
+              'B7': 'Player7Score',
+              'B8': 'Player8Score',
+              'C1': 'Player1Stadt',
+              'C2': 'Player2Stadt',
+              'C3': 'Player3Stadt',
+              'C4': 'Player4Stadt',
+              'C5': 'Player5Stadt',
+              'C6': 'Player6Stadt',
+              'C7': 'Player7Stadt',
+              'C8': 'Player8Stadt'
+
+            }
+        }
+
+        const spreadsheetID = '1-aREszKliFKYch2dpWvTi0PIiXSzMm3KgVOSXBIvfas';
+        const worksheetName = 'Standings Top 8';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>
