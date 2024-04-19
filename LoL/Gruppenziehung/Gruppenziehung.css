@@ -1,0 +1,112 @@
+@import url("../fonts.css");
+
+/*Animationen*/
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Sora Uni";
+  /* outline: solid coral 2px; */
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.AnimLeft {
+  opacity: 0;
+  animation: fadeInLeft 1s ease-in-out 0.7s forwards;
+}
+
+.AnimRight {
+  opacity: 0;
+  animation: fadeInRight 1s ease-in-out 0.7s forwards;
+}
+
+.tabelleWrapper {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr 10fr;
+  column-gap: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.tabelleWrapper .tabelleSpalte:nth-child(2) {
+  margin-right: 60px;
+}
+
+.tabelleSpalte {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto;
+}
+
+.tabelleSpalte span {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.tabelleSpalte span:nth-child(even) {
+  text-align: center;
+  padding-right: 20px;
+}
+
+.tabelleSpalte span:nth-child(odd) {
+  width: 500px;
+  padding-left: 20px;
+}
+
+.zeile {
+  height: 60px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.TeamInfo {
+  border-left: solid #053d75 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.TeamInfo span:nth-child(even) {
+  font-weight: normal;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.TeamInfo span:nth-child(odd) {
+  font-size: 22px;
+}
+
+img {
+  place-self: center;
+  max-width: 50px;
+  max-height: 50px;
+  margin-inline: 0.2rem;
+}
