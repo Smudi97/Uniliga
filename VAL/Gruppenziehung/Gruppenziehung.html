@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./Gruppenziehung.css" />
+  </head>
+
+  <body>
+    <div class="tabelleWrapper">
+      <div class="tabelleSpalte">
+        <div
+          style="
+            width: 100%;
+            display: flex;
+            place-items: center;
+            justify-content: center;
+          "
+        >
+          Gruppe 1
+        </div>
+        <div class="zeile">
+          <img id="Team1Logo" />
+          <div class="TeamInfo">
+            <span id="Team1Name"></span>
+            <span id="Team1Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team2Logo" />
+          <div class="TeamInfo">
+            <span id="Team2Name"></span>
+            <span id="Team2Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team3Logo" />
+          <div class="TeamInfo">
+            <span id="Team3Name"></span>
+            <span id="Team3Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team4Logo" />
+          <div class="TeamInfo">
+            <span id="Team4Name"></span>
+            <span id="Team4Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team5Logo" />
+          <div class="TeamInfo">
+            <span id="Team5Name"></span>
+            <span id="Team5Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team6Logo" />
+          <div class="TeamInfo">
+            <span id="Team6Name"></span>
+            <span id="Team6Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team7Logo" />
+          <div class="TeamInfo">
+            <span id="Team7Name"></span>
+            <span id="Team7Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team8Logo" />
+          <div class="TeamInfo">
+            <span id="Team8Name"></span>
+            <span id="Team8Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team9Logo" />
+          <div class="TeamInfo">
+            <span id="Team9Name"></span>
+            <span id="Team9Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team10Logo" />
+          <div class="TeamInfo">
+            <span id="Team10Name"></span>
+            <span id="Team10Stadt"></span>
+          </div>
+        </div>
+      </div>
+      <div class="tabelleSpalte">
+        <div
+          style="
+            width: 100%;
+            display: flex;
+            place-items: center;
+            justify-content: center;
+          "
+        >
+          Gruppe 2
+        </div>
+
+        <div class="zeile">
+          <img id="Team11Logo" />
+          <div class="TeamInfo">
+            <span id="Team11Name"></span>
+            <span id="Team11Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team12Logo" />
+          <div class="TeamInfo">
+            <span id="Team12Name"></span>
+            <span id="Team12Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team13Logo" />
+          <div class="TeamInfo">
+            <span id="Team13Name"></span>
+            <span id="Team13Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team14Logo" />
+          <div class="TeamInfo">
+            <span id="Team14Name"></span>
+            <span id="Team14Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team15Logo" />
+          <div class="TeamInfo">
+            <span id="Team15Name"></span>
+            <span id="Team15Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team16Logo" />
+          <div class="TeamInfo">
+            <span id="Team16Name"></span>
+            <span id="Team16Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team17Logo" />
+          <div class="TeamInfo">
+            <span id="Team17Name"></span>
+            <span id="Team17Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team18Logo" />
+          <div class="TeamInfo">
+            <span id="Team18Name"></span>
+            <span id="Team18Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team19Logo" />
+          <div class="TeamInfo">
+            <span id="Team19Name"></span>
+            <span id="Team19Stadt"></span>
+          </div>
+        </div>
+        <div class="zeile">
+          <img id="Team20Logo" />
+          <div class="TeamInfo">
+            <span id="Team20Name"></span>
+            <span id="Team20Stadt"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="../Updater.js"></script>
+    <script src="../regex-operation.js"></script>
+    <script>
+      const settings = {
+        string: {
+          A1: "Team1Name",
+          A2: "Team2Name",
+          A3: "Team3Name",
+          A4: "Team4Name",
+          A5: "Team5Name",
+          A6: "Team6Name",
+          A7: "Team7Name",
+          A8: "Team8Name",
+          A9: "Team9Name",
+          A10: "Team10Name",
+          A11: "Team11Name",
+          A12: "Team12Name",
+          A13: "Team13Name",
+          A14: "Team14Name",
+          A15: "Team15Name",
+          A16: "Team16Name",
+          A17: "Team17Name",
+          A18: "Team18Name",
+          B1: "Team1Stadt",
+          B2: "Team2Stadt",
+          B3: "Team3Stadt",
+          B4: "Team4Stadt",
+          B5: "Team5Stadt",
+          B6: "Team6Stadt",
+          B7: "Team7Stadt",
+          B8: "Team8Stadt",
+          B9: "Team9Stadt",
+          B10: "Team10Stadt",
+          B11: "Team11Stadt",
+          B12: "Team12Stadt",
+          B13: "Team13Stadt",
+          B14: "Team14Stadt",
+          B15: "Team15Stadt",
+          B16: "Team16Stadt",
+          B17: "Team17Stadt",
+          B18: "Team18Stadt",
+          B19: "Team19Stadt",
+          B20: "Team20Stadt",
+        },
+        image: {
+          C1: "Team1Logo",
+          C2: "Team2Logo",
+          C3: "Team3Logo",
+          C4: "Team4Logo",
+          C5: "Team5Logo",
+          C6: "Team6Logo",
+          C7: "Team7Logo",
+          C8: "Team8Logo",
+          C9: "Team9Logo",
+          C10: "Team10Logo",
+          C11: "Team11Logo",
+          C12: "Team12Logo",
+          C13: "Team13Logo",
+          C14: "Team14Logo",
+          C15: "Team15Logo",
+          C16: "Team16Logo",
+          C17: "Team17Logo",
+          C18: "Team18Logo",
+          C19: "Team19Logo",
+          C20: "Team20Logo",
+        },
+      };
+
+      const spreadsheetID = "1HSgl__nnN49Dfv2wVV1QpO_CtQNEtARvyXoFVpQR-lk";
+      const worksheetName = "output";
+      const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+      const updateInterval = 3000;
+
+      const u = new GraphicsUpdater(
+        settings,
+        spreadsheetID,
+        worksheetName,
+        apiKey,
+        updateInterval,
+        false
+      );
+      u.addOperation("regex", regexOperation);
+      u.startUpdating();
+    </script>
+  </body>
+</html>
