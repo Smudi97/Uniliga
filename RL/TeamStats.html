@@ -1,96 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <title>RL Team Stats</title>
-    <link rel="stylesheet" href="./TeamStats.css">
+    <link rel="stylesheet" href="./TeamStats.css" />
+  </head>
 
-</head>
+  <body
+    style="
+      background-color: rgba(0, 0, 0, 0);
+      margin: 0px auto;
+      overflow: hidden;
+    "
+  >
+    <img class="AnimLeft imgfs" src="iconsleft.png" />
+    <img class="AnimRight imgfs" src="iconsright.png" />
 
-<body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
+    <div class="TitleGrid AnimCenter">
+      <span id="TitleRow1">team stats vergleich</span>
+      <span id="TitleRow2">pro spiel</span>
+      <span id="TitleRow3">vs</span>
+    </div>
 
-  <img class="AnimLeft imgfs" src="iconsleft.png">
-  <img class="AnimRight imgfs" src="iconsright.png">
+    <div class="AnimLeft StatsTitleBox StatsTitleLeft">
+      <span>Goals</span>
+      <span>Shots</span>
+      <span>assists</span>
+      <span>saves</span>
+      <span>team shot%</span>
+      <span>avg team speed</span>
+    </div>
 
-  <div class="TitleGrid AnimCenter">
-    <span id="TitleRow1">team stats vergleich</span>
-    <span id="TitleRow2">pro spiel</span>
-    <span id="TitleRow3">vs</span>
-  </div>
-  
-  <div class="AnimLeft StatsTitleBox StatsTitleLeft">
-    <span>Goals</span>
-    <span>Shots</span>
-    <span>assists</span>
-    <span>saves</span>
-    <span>team shot%</span>
-    <span>avg team speed</span>
-  </div>
+    <div class="AnimRight StatsTitleBox StatsTitleRight">
+      <span>Goals</span>
+      <span>Shots</span>
+      <span>assists</span>
+      <span>saves</span>
+      <span>team shot%</span>
+      <span>avg team speed</span>
+    </div>
 
-  <div class="AnimRight StatsTitleBox StatsTitleRight">
-    <span>Goals</span>
-    <span>Shots</span>
-    <span>assists</span>
-    <span>saves</span>
-    <span>team shot%</span>
-    <span>avg team speed</span>
-  </div>
+    <div class="StatsContainer">
+      <div class="StatsOffset AnimLeft" id="TeamBlueGoalsPerGame"></div>
+      <div class="StatsOffset AnimLeft" id="TeamBlueShotsPerGame"></div>
+      <div class="StatsOffset AnimLeft" id="TeamBlueAssistsPerGame"></div>
+      <div class="StatsOffset AnimLeft" id="TeamBlueSavesPerGame"></div>
+      <div class="AnimLeft" id="TeamBlueShotPerc"></div>
+      <div class="AnimLeft" id="TeamBlueAvgSpeed"></div>
+      <div class="StatsOffset AnimRight" id="TeamOrangeGoalsPerGame"></div>
+      <div class="StatsOffset AnimRight" id="TeamOrangeShotsPerGame"></div>
+      <div class="StatsOffset AnimRight" id="TeamOrangeAssistsPerGame"></div>
+      <div class="StatsOffset AnimRight" id="TeamOrangeSavesPerGame"></div>
+      <div class="AnimRight" id="TeamOrangeShotPerc"></div>
+      <div class="AnimRight" id="TeamOrangeAvgSpeed"></div>
+    </div>
 
-  <div class="StatsContainer">
-    <div class="StatsOffset AnimLeft" id="TeamBlueGoalsPerGame"></div>
-    <div class="StatsOffset AnimLeft" id="TeamBlueShotsPerGame"></div>
-    <div class="StatsOffset AnimLeft" id="TeamBlueAssistsPerGame"></div>
-    <div class="StatsOffset AnimLeft" id="TeamBlueSavesPerGame"></div>
-    <div class="AnimLeft" id="TeamBlueShotPerc"></div>
-    <div class="AnimLeft" id="TeamBlueAvgSpeed"></div>
-    <div class="StatsOffset AnimRight" id="TeamOrangeGoalsPerGame"></div>
-    <div class="StatsOffset AnimRight" id="TeamOrangeShotsPerGame"></div>
-    <div class="StatsOffset AnimRight" id="TeamOrangeAssistsPerGame"></div>
-    <div class="StatsOffset AnimRight" id="TeamOrangeSavesPerGame"></div>
-    <div class="AnimRight" id="TeamOrangeShotPerc"></div>
-    <div class="AnimRight" id="TeamOrangeAvgSpeed"></div>
-  </div>
-
-  <div class="AnimBottomText TeamName" id="TeamBlueTeamname"></div>
-  <img class="AnimBottomLogo TeamLogo" id="TeamBlueLogo">
-  <div class="AnimTop TeamName" id="TeamOrangeTeamname"></div>
-  <img class="AnimTop TeamLogo" id="TeamOrangeLogo">
+    <div class="AnimBottomText TeamName" id="TeamBlueTeamname"></div>
+    <img class="AnimBottomLogo TeamLogo" id="TeamBlueLogo" />
+    <div class="AnimTop TeamName" id="TeamOrangeTeamname"></div>
+    <img class="AnimTop TeamLogo" id="TeamOrangeLogo" />
 
     <!-- JAVASCRIPT STUFF -->
     <script src="./Updater.js"></script>
     <script src="./regex-operation.js"></script>
     <script>
-        const settings = {
-            'string': {
-              'B2': 'TeamBlueGoalsPerGame',
-              'B3': 'TeamBlueShotsPerGame',
-              'B4': 'TeamBlueAssistsPerGame',
-              'B5': 'TeamBlueSavesPerGame',
-              'B6': 'TeamBlueShotPerc',
-              'B7': 'TeamBlueAvgSpeed',
-              'B9': 'TeamBlueTeamname',
-              'B10': 'TeamOrangeGoalsPerGame',
-              'B11': 'TeamOrangeShotsPerGame',
-              'B12': 'TeamOrangeAssistsPerGame',
-              'B13': 'TeamOrangeSavesPerGame',
-              'B14': 'TeamOrangeShotPerc',
-              'B15': 'TeamOrangeAvgSpeed',
-              'B17': 'TeamOrangeTeamname',
-            },
-            "image": {
-              'B8': 'TeamBlueLogo',
-              'B16': 'TeamOrangeLogo',
-            }
-        }
+      const settings = {
+        string: {
+          B2: "TeamBlueGoalsPerGame",
+          B3: "TeamBlueShotsPerGame",
+          B4: "TeamBlueAssistsPerGame",
+          B5: "TeamBlueSavesPerGame",
+          B6: "TeamBlueShotPerc",
+          B7: "TeamBlueAvgSpeed",
+          B9: "TeamBlueTeamname",
+          B10: "TeamOrangeGoalsPerGame",
+          B11: "TeamOrangeShotsPerGame",
+          B12: "TeamOrangeAssistsPerGame",
+          B13: "TeamOrangeSavesPerGame",
+          B14: "TeamOrangeShotPerc",
+          B15: "TeamOrangeAvgSpeed",
+          B17: "TeamOrangeTeamname",
+        },
+        image: {
+          B8: "TeamBlueLogo",
+          B16: "TeamOrangeLogo",
+        },
+      };
 
-        const spreadsheetID = '1-5P6bL6gAtG8KqV1qakzErR99fiBAM0Befuj-N7TaRc';
-        const worksheetName = 'Output';
-        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
-        const updateInterval = 3000;
+      const spreadsheetID = "19DMM8kpfRInIZIVdoA2p4v2KJ6A8oyU2bdxB9W5Bs78";
+      const worksheetName = "Output";
+      const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+      const updateInterval = 3000;
 
-        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
-        u.addOperation('regex', regexOperation);
-        u.startUpdating();
+      const u = new GraphicsUpdater(
+        settings,
+        spreadsheetID,
+        worksheetName,
+        apiKey,
+        updateInterval,
+        false
+      );
+      u.addOperation("regex", regexOperation);
+      u.startUpdating();
     </script>
-</body>
+  </body>
+</html>
